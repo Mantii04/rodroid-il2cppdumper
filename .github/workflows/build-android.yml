@@ -37,9 +37,10 @@ jobs:
         echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "ndk;26.3.11579264"
 
     - name: Install frontend dependencies
+      run: pnpm install
+
     - name: Sync Tauri API Version
       run: pnpm add @tauri-apps/api@2.10.3
-      run: pnpm install
 
     - name: Initialize Tauri Android
       run: pnpm tauri android init
