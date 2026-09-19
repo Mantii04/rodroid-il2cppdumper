@@ -40,7 +40,7 @@ jobs:
       run: pnpm install
 
     - name: Sync Tauri API Version
-      run: pnpm add @tauri-apps/api@2.10.3
+      run: pnpm add @tauri-apps/api@2.10
 
     - name: Initialize Tauri Android
       run: pnpm tauri android init
