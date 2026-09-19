@@ -1,6 +1,7 @@
 <script lang="ts">
   import { downloadDir, documentDir, join } from "@tauri-apps/api/path";
   import { type } from "@tauri-apps/plugin-os";
+  import { invoke } from "@tauri-apps/api/core";
   import { onMount } from "svelte";
   import { IconButton } from "noph-ui";
   import { Icon } from "noph-ui/icons";
@@ -41,6 +42,19 @@
   }
 
   onMount(async () => {
+    // --- CHECK FOR PREVIOUS CRASH ---
+    try {
+      const prevCrash = await invoke<string | null>('check_previous_crash');
+      if (prevCrash) {
+        crashLog.set(prevCrash);
+        currentScreen.set("crash");
+        return; // Stop initialization if we are showing crash screen
+      }
+    } catch (e) {
+      console.error("Failed to check crash log", e);
+    }
+    // --------------------------------
+
     try {
       const osType = await type();
       let baseDir = "";
@@ -89,7 +103,17 @@
   <title>Rodroid IL2CPP Dumper</title>
 </svelte:head>
 
-{#if $currentScreen === "splash"}
+{#if $crashLog && $currentScreen === "crash"}
+  <!-- Custom Fullscreen Crash Overlay to ensure it's readable and copyable -->
+  <div style="position:fixed;inset:0;background:#1e1e1e;z-index:9999;padding:16px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box;">
+    <h2 style="color:#ff5252;margin:0;font-family:sans-serif;">App Crashed</h2>
+    <p style="color:#aaa;margin:0;font-family:sans-serif;font-size:14px;">Tap and hold the text below to copy it:</p>
+    <div style="flex:1;overflow-y:auto;background:#000;color:#0f0;padding:12px;border-radius:8px;white-space:pre-wrap;word-break:break-all;user-select:text;-webkit-user-select:text;font-family:monospace;font-size:12px;">
+{$crashLog}
+    </div>
+    <button on:click={handleCrashRestart} style="padding:12px;background:#3a3a3a;color:#fff;border:none;border-radius:8px;font-family:sans-serif;cursor:pointer;">Restart App</button>
+  </div>
+{:else if $currentScreen === "splash"}
   <SplashScreen onfinished={handleSplashFinished} />
 {:else if $currentScreen === "crash"}
   <main class="h-[100dvh] flex flex-col overflow-hidden pb-[env(safe-area-inset-bottom)] m3-app">

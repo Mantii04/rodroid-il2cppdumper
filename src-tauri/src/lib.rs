@@ -380,7 +380,7 @@ fn init_elf(
     let mut force_cr = 0u64;
     let mut force_mr = 0u64;
     if config.force_dump {
-        emit_log(app, "Force dump mode enabled, entering manual addresses...");
+        emit_log(app, "Force dump mode enabled, entering manual Addresses...");
         if let Some((cr, mr)) = prompt_manual_addresses(app, state) {
             emit_log(app, &format!("CodeRegistration : 0x{cr:x}"));
             emit_log(app, &format!("MetadataRegistration : 0x{mr:x}"));
@@ -409,7 +409,6 @@ fn init_elf(
             helper.find_metadata_registration()
         };
 
-        // Log CR/MR only once — after the strategy that actually succeeds.
         let mut found = false;
         let mut final_cr: Option<u64> = None;
         let mut final_mr: Option<u64> = None;
@@ -1299,6 +1298,11 @@ fn start_dump(
                     std::env::consts::ARCH,
                     panic_msg
                 );
+                
+                // --- SAVE TO FILE FOR NEXT LAUNCH ---
+                let _ = fs::write("/storage/emulated/0/Documents/rodroid_app_crash.log", &crash_log);
+                // -----------------------------------
+                
                 let _ = app_for_panic.emit("dump-crash", CrashEvent { crash_log });
             }
         }
@@ -1319,8 +1323,36 @@ fn get_default_config() -> String {
     serde_json::to_string_pretty(&Config::default()).unwrap_or_default()
 }
 
+#[tauri::command]
+fn check_previous_crash() -> Option<String> {
+    let crash_path = "/storage/emulated/0/Documents/rodroid_app_crash.log";
+    if std::path::Path::new(crash_path).exists() {
+        let content = fs::read_to_string(crash_path).unwrap_or_default();
+        let _ = fs::remove_file(crash_path);
+        Some(content)
+    } else {
+        None
+    }
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    // --- GLOBAL CRASH HANDLER ---
+    use std::path::Path;
+    let crash_log_path = "/storage/emulated/0/Documents/rodroid_app_crash.log";
+    
+    let default_hook = std::panic::take_hook();
+    std::panic::set_hook(Box::new(move |info| {
+        let backtrace = std::backtrace::Backtrace::force_capture();
+        let log = format!(
+            "=== Rodroid IL2CPP Dumper App Crash ===\n\nPanic Info: {}\n\nBacktrace:\n{}",
+            info, backtrace
+        );
+        let _ = fs::write(crash_log_path, &log);
+        default_hook(info);
+    }));
+    // -----------------------------
+
     let app_state = Arc::new(AppState {
         input_sender: Mutex::new(None),
         dump_running: Mutex::new(false),
@@ -1337,6 +1369,7 @@ pub fn run() {
             start_dump,
             submit_input,
             get_default_config,
+            check_previous_crash
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
