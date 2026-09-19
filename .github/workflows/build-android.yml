@@ -30,7 +30,7 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       with:
-        packages: 'tools platform-tools build-tools;34.0.0 platforms;android-34'
+        packages: 'platform-tools build-tools;34.0.0 platforms;android-34'
 
     - name: Install NDK
       run: |
@@ -45,7 +45,6 @@ jobs:
     - name: Patch AndroidManifest for Android 14 Storage
       run: |
         MANIFEST="src-tauri/gen/android/app/src/main/AndroidManifest.xml"
-        # Insert permissions before <application> and add storage attributes to it
         sed -i 's/<application/<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" \/>\n<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>\n<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" \/>\n<application android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true"/' $MANIFEST
 
     - name: Build arm64 APK
