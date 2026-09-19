@@ -12,6 +12,7 @@ pub mod output;
 pub mod search;
 pub mod utils;
 
+use std::cell::Cell;
 use std::fs;
 use std::sync::{Arc, Mutex};
 use std::time::Instant;
@@ -71,6 +72,11 @@ struct BinaryInfo {
 struct AppState {
     input_sender: Mutex<Option<std::sync::mpsc::Sender<String>>>,
     dump_running: Mutex<bool>,
+}
+
+// Thread-local flag to track if we are inside a dump operation
+thread_local! {
+    static IN_DUMP: Cell<bool> = Cell::new(false);
 }
 
 fn emit_log(app: &AppHandle, message: &str) {
@@ -1242,6 +1248,9 @@ fn start_dump(
 
         let config: Config = serde_json::from_str(&config_json).unwrap_or_default();
         let app_for_panic = app.clone();
+        
+        // Set flag so global panic hook knows this is a dump error, not an app crash
+        IN_DUMP.with(|f| f.set(true));
         let result = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| {
             run_dump(
                 &app,
@@ -1252,6 +1261,8 @@ fn start_dump(
                 &config,
             )
         }));
+        IN_DUMP.with(|f| f.set(false));
+        
         match result {
             Ok(Ok(output_path)) => {
                 let _ = app_for_panic.emit(
@@ -1292,17 +1303,14 @@ fn start_dump(
                     format!("{hrs:02}:{mins:02}:{secs:02} UTC")
                 };
                 let crash_log = format!(
-                    "=== IL2CPP Dumper Crash Report ===\nTime: {}\nThread: dump-worker\nOS: {} {}\n\n=== Exception ===\nRust Panic\n{}\n",
+                    "=== IL2CPP Dumper Dump Error ===\nTime: {}\nThread: dump-worker\nOS: {} {}\n\n=== Exception ===\nRust Panic\n{}\n",
                     timestamp,
                     std::env::consts::OS,
                     std::env::consts::ARCH,
                     panic_msg
                 );
                 
-                // --- SAVE TO FILE FOR NEXT LAUNCH ---
-                let _ = fs::write("/storage/emulated/0/Documents/rodroid_app_crash.log", &crash_log);
-                // -----------------------------------
-                
+                // Send to frontend for immediate display (existing CrashScreen)
                 let _ = app_for_panic.emit("dump-crash", CrashEvent { crash_log });
             }
         }
@@ -1338,17 +1346,21 @@ fn check_previous_crash() -> Option<String> {
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     // --- GLOBAL CRASH HANDLER ---
-    use std::path::Path;
+    // This catches app-level panics (not dump errors) and saves them for next launch
     let crash_log_path = "/storage/emulated/0/Documents/rodroid_app_crash.log";
     
     let default_hook = std::panic::take_hook();
     std::panic::set_hook(Box::new(move |info| {
-        let backtrace = std::backtrace::Backtrace::force_capture();
-        let log = format!(
-            "=== Rodroid IL2CPP Dumper App Crash ===\n\nPanic Info: {}\n\nBacktrace:\n{}",
-            info, backtrace
-        );
-        let _ = fs::write(crash_log_path, &log);
+        // Only save to file if this is NOT a dump error (dump errors are handled separately)
+        let is_dump_error = IN_DUMP.with(|f| f.get());
+        if !is_dump_error {
+            let backtrace = std::backtrace::Backtrace::force_capture();
+            let log = format!(
+                "=== Rodroid IL2CPP Dumper App Crash ===\n\nPanic Info: {}\n\nBacktrace:\n{}",
+                info, backtrace
+            );
+            let _ = fs::write(crash_log_path, &log);
+        }
         default_hook(info);
     }));
     // -----------------------------

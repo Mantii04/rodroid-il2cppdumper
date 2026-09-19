@@ -45,18 +45,11 @@ jobs:
     - name: Patch AndroidManifest for Android 14 Storage
       run: |
         MANIFEST="src-tauri/gen/android/app/src/main/AndroidManifest.xml"
-        sed -i 's/<\/manifest>//' $MANIFEST
-        cat >> $MANIFEST << EOF
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-        <application android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true">
-        </application>
-        </manifest>
-        EOF
+        # Insert permissions before <application> and add storage attributes to it
+        sed -i 's/<application/<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" \/>\n<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>\n<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" \/>\n<application android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true"/' $MANIFEST
 
     - name: Build arm64 APK
-      run: pnpm tauri android build --target aarch64
+      run: pnpm tauri android build --target aarch64-linux-android
       env:
         NDK_HOME: ${{ env.ANDROID_HOME }}/ndk/26.3.11579264
 
