@@ -1,4 +1,17 @@
 <script lang="ts">
+
+  // Converts Android content:// URIs to real filesystem paths without copying files
+  function androidUriToPath(uri: string): string {
+    if (!uri.startsWith("content://")) return uri;
+    const decoded = decodeURIComponent(uri);
+    let match = decoded.match(/com\.android\.externalstorage\.documents\/document\/primary(?:%3A|:|\/)(.*)/);
+    if (match && match[1]) return "/storage/emulated/0/" + match[1].replace(/%2F/g, '/');
+    match = decoded.match(/(\/storage\/emulated\/0\/.*)/);
+    if (match && match[1]) return match[1];
+    return uri;
+  }
+
+
   import { invoke } from "@tauri-apps/api/core";
   import { open } from "@tauri-apps/plugin-dialog";
   import { type } from "@tauri-apps/plugin-os";
@@ -28,11 +41,12 @@
 
   async function pickBinary() {
     const osType = await type();
-    const file = await open({
+    // const raw_file = await open({
       multiple: false,
-      ...(osType === "ios" ? {} : { }] }),
+      ...(osType === "ios" ? {} : { filters: [{ name: "IL2CPP Binary", extensions: ["so", "dll", "exe", "dylib", "nso", "wasm", "*"] }] }),
     });
-    if (file) {
+    if (raw_file) {
+    let file = androidUriToPath(raw_file as string);
       let finalPath = file;
       if (osType === "ios") {
         try {
@@ -59,11 +73,12 @@
 
   async function pickMetadata() {
     const osType = await type();
-    const file = await open({
+    // const raw_file = await open({
       multiple: false,
-      ...(osType === "ios" ? {} : { }] }),
+      ...(osType === "ios" ? {} : { filters: [{ name: "Metadata", extensions: ["dat", "*"] }] }),
     });
-    if (file) {
+    if (raw_file) {
+    let file = androidUriToPath(raw_file as string);
       let finalPath = file;
       if (osType === "ios") {
         try {
