@@ -30,7 +30,7 @@
     const osType = await type();
     const file = await open({
       multiple: false,
-      ...(osType === "ios" ? {} : { filters: [{ name: "IL2CPP Binary", extensions: ["so", "dll", "exe", "dylib", "nso", "wasm", "*"] }] }),
+      ...(osType === "ios" ? {} : { }] }),
     });
     if (file) {
       let finalPath = file;
@@ -61,7 +61,7 @@
     const osType = await type();
     const file = await open({
       multiple: false,
-      ...(osType === "ios" ? {} : { filters: [{ name: "Metadata", extensions: ["dat", "*"] }] }),
+      ...(osType === "ios" ? {} : { }] }),
     });
     if (file) {
       let finalPath = file;
