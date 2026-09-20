@@ -1,172 +1,112 @@
 <script lang="ts">
-  import { invoke } from "@tauri-apps/api/core";
   import { open } from "@tauri-apps/plugin-dialog";
-  import { type } from "@tauri-apps/plugin-os";
-  import { copyFile, mkdir } from "@tauri-apps/plugin-fs";
-  import { appDataDir, join } from "@tauri-apps/api/path";
-  import { Button, IconButton, ChipSet, AssistChip } from "noph-ui";
-  import { Icon } from "noph-ui/icons";
-  import { beginDump } from "$lib/dumpRunner";
-  import { binaryPath, metadataPath, binaryInfo, configDialogOpen, t } from "$lib/stores";
-  import type { BinaryInfo } from "$lib/types";
-  import AnimatedExpand from "./AnimatedExpand.svelte";
-  import PathInput from "./PathInput.svelte";
+  import { invoke } from "@tauri-apps/api/core";
 
-  let binaryValue = $state("");
-  let metadataValue = $state("");
+  export let binaryPath = "";
+  export let metadataPath = "";
+  export let outputDir = "";
+  export let onConfigClick: () => void = () => {};
+  export let onDump: () => void = () => {};
+  export let onBinaryPicked: (path: string, format: string, unity_version: string) => void = () => {};
 
-  $effect(() => {
-    binaryValue = $binaryPath;
-  });
-  $effect(() => {
-    metadataValue = $metadataPath;
-  });
+  // Converts Android content:// URIs to real filesystem paths without copying files
+  function androidUriToPath(uri: string): string {
+    if (!uri.startsWith("content://")) {
+      return uri;
+    }
 
-  let showBinaryInfo = $derived(
-    !!$binaryInfo && ($binaryInfo.format.length > 0 || ($binaryInfo.unity_version?.length ?? 0) > 0)
-  );
+    const decoded = decodeURIComponent(uri);
+    
+    // Pattern 1: External Storage Provider (Downloads, Internal Storage, SD Card)
+    // Example: content://com.android.externalstorage.documents/document/primary%3ADownload%2Flibil2cpp.so
+    let match = decoded.match(/com\.android\.externalstorage\.documents\/document\/primary(?:%3A|:|\/)(.*)/);
+    if (match && match[1]) {
+      return "/storage/emulated/0/" + match[1].replace(/%2F/g, '/').replace(/\//g, '/');
+    }
 
-  async function pickBinary() {
-    const osType = await type();
+    // Pattern 2: Raw path fallback (some file managers include the real path in the URI)
+    match = decoded.match(/(\/storage\/emulated\/0\/.*)/);
+    if (match && match[1]) {
+      return match[1];
+    }
+
+    // Fallback to original if we can't parse it
+    return uri;
+  }
+
+  async function pickFile(type: "binary" | "metadata") {
     const file = await open({
       multiple: false,
     });
+
     if (file) {
-      let finalPath = file;
-      if (osType === "ios") {
+      let path = file as string;
+      
+      // Convert Android URI to real path so Rust can read it directly (no cache copy needed)
+      path = androidUriToPath(path);
+
+      if (type === "binary") {
+        binaryPath = path;
         try {
-          const appData = await appDataDir();
-          await mkdir(appData, { recursive: true }).catch(() => {});
-          const targetPath = await join(appData, "target_binary.bin");
-          await copyFile(file, targetPath);
-          finalPath = targetPath;
-        } catch (e: any) {
-          console.error("iOS copy error (binary):", e);
-          alert("iOS Copy Error: " + (e?.message || e));
+          const info = await invoke<{ format: string; unity_version: string }>("detect_binary", { path });
+          onBinaryPicked(path, info.format, info.unity_version);
+        } catch (e) {
+          alert(`Failed to detect binary: ${e}`);
         }
-      }
-
-      binaryPath.set(finalPath);
-      try {
-        const info: BinaryInfo = await invoke("detect_binary", { path: finalPath });
-        binaryInfo.set(info);
-      } catch {
-        binaryInfo.set(null);
+      } else {
+        metadataPath = path;
       }
     }
-  }
-
-  async function pickMetadata() {
-    const osType = await type();
-    const file = await open({
-      multiple: false,
-    });
-    if (file) {
-      let finalPath = file;
-      if (osType === "ios") {
-        try {
-          const appData = await appDataDir();
-          await mkdir(appData, { recursive: true }).catch(() => {});
-          const targetPath = await join(appData, "target_metadata.dat");
-          await copyFile(file, targetPath);
-          finalPath = targetPath;
-        } catch (e: any) {
-          console.error("iOS copy error (metadata):", e);
-          alert("iOS Copy Error: " + (e?.message || e));
-        }
-      }
-      metadataPath.set(finalPath);
-    }
-  }
-
-  function onBinaryChange(val: string) {
-    binaryPath.set(val);
-    if (val) {
-      invoke("detect_binary", { path: val })
-        .then((info: any) => binaryInfo.set(info))
-        .catch(() => binaryInfo.set(null));
-    } else {
-      binaryInfo.set(null);
-    }
-  }
-
-  function startDump() {
-    void beginDump();
   }
 </script>
 
-<div class="flex flex-col h-full p-4 gap-3 overflow-y-auto">
-  <div class="m3-surface p-4 space-y-3 m3-stagger-in" style="animation-delay: 0ms">
-    <div class="flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2 min-w-0">
-        <div class="m3-icon-tile size-7">
-          <Icon>description</Icon>
-        </div>
-        <span class="m3-label">{$t.label_binary}</span>
-      </div>
-      <IconButton variant="tonal" aria-label={$t.select_binary} onclick={pickBinary}>
-        <Icon>folder_open</Icon>
-      </IconButton>
+<div class="p-5 space-y-4">
+  <div class="space-y-2">
+    <p class="text-sm font-medium m3-secondary">IL2CPP Binary</p>
+    <div class="flex gap-2">
+      <input 
+        class="m3-text-field flex-1" 
+        type="text" 
+        bind:value={binaryPath} 
+        placeholder="libil2cpp.so" 
+      />
+      <button class="m3-button m3-button-tonal" on:click={() => pickFile("binary")}>
+        Pick
+      </button>
     </div>
-    <PathInput
-      bind:value={binaryValue}
-      placeholder="No file selected"
-      title={binaryValue || undefined}
-      onchange={() => onBinaryChange(binaryValue)}
-    />
-    <AnimatedExpand show={showBinaryInfo}>
-      <ChipSet>
-        {#if $binaryInfo?.format}
-          <AssistChip label="{$t.label_format}: {$binaryInfo.format}" />
-        {/if}
-        {#if $binaryInfo?.unity_version && $binaryInfo.unity_version !== "null"}
-          <AssistChip label="{$t.label_unity}: {$binaryInfo.unity_version}" />
-        {/if}
-      </ChipSet>
-    </AnimatedExpand>
   </div>
 
-  <div class="m3-surface p-4 space-y-3 m3-stagger-in" style="animation-delay: 80ms">
-    <div class="flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2 min-w-0">
-        <div class="m3-icon-tile size-7">
-          <Icon>storage</Icon>
-        </div>
-        <span class="m3-label">{$t.label_metadata}</span>
-      </div>
-      <IconButton variant="tonal" aria-label={$t.select_metadata} onclick={pickMetadata}>
-        <Icon>folder_open</Icon>
-      </IconButton>
+  <div class="space-y-2">
+    <p class="text-sm font-medium m3-secondary">Metadata</p>
+    <div class="flex gap-2">
+      <input 
+        class="m3-text-field flex-1" 
+        type="text" 
+        bind:value={metadataPath} 
+        placeholder="global-metadata.dat" 
+      />
+      <button class="m3-button m3-button-tonal" on:click={() => pickFile("metadata")}>
+        Pick
+      </button>
     </div>
-    <PathInput
-      bind:value={metadataValue}
-      placeholder="No file selected"
-      title={metadataValue || undefined}
-      onchange={() => metadataPath.set(metadataValue)}
-    />
   </div>
 
-  <div class="m3-stagger-in" style="animation-delay: 160ms">
-    <Button variant="tonal" class="w-full" onclick={() => configDialogOpen.set(true)}>
-      {#snippet start()}
-        <Icon>tune</Icon>
-      {/snippet}
-      {$t.dump_options}
-    </Button>
+  <div class="space-y-2">
+    <p class="text-sm font-medium m3-secondary">Output Directory</p>
+    <div class="flex gap-2">
+      <input 
+        class="m3-text-field flex-1" 
+        type="text" 
+        bind:value={outputDir} 
+        placeholder="IL2CppDumper" 
+      />
+    </div>
   </div>
 
-  <div class="flex-1 min-h-4"></div>
-
-  <div class="m3-stagger-in pb-4" style="animation-delay: 240ms">
-    <button
-      type="button"
-      class="m3-start-dump"
-      disabled={!$binaryPath || !$metadataPath}
-      onclick={startDump}
-    >
-      <Icon>play_arrow</Icon>
-      <span>{$t.start_dump}</span>
-    </button>
-  </div>
+  <button class="m3-button m3-button-filled w-full" on:click={onDump}>
+    Start Dump
+  </button>
+  <button class="m3-button m3-button-text w-full" on:click={onConfigClick}>
+    Dump Options
+  </button>
 </div>
-
