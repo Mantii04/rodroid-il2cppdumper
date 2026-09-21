@@ -1345,6 +1345,8 @@ fn check_previous_crash() -> Option<String> {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    // Limit Rayon to 2 threads to prevent Out Of Memory (OOM) crashes on Android
+    let _ = rayon::ThreadPoolBuilder::new().num_threads(2).build_global();
     // --- GLOBAL CRASH HANDLER ---
     // This catches app-level panics (not dump errors) and saves them for next launch
     let crash_log_path = "/storage/emulated/0/Documents/rodroid_app_crash.log";
