@@ -313,7 +313,7 @@ impl Il2CppDecompiler {
         for (type_text, split) in type_results {
             buf.push_str(&type_text);
         if buf.len() > 1000000 {
-            dump_writer.write_all(buf.as_bytes()).ok();
+            dump_writer.write_all(buf.as_bytes()).ok(); dump_writer.flush().ok();
             buf.clear();
         }
             if let Some(item) = split {
@@ -337,7 +337,7 @@ impl Il2CppDecompiler {
             }
         });
 
-        dump_writer.write_all(buf.as_bytes())?;
+        dump_writer.write_all(buf.as_bytes())?; dump_writer.flush()?;
         Ok(())
     }
 
