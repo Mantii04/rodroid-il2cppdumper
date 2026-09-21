@@ -1,0 +1,903 @@
+build	Build arm64 APK	﻿2026-09-21T15:22:15.3066876Z ##[group]Run pnpm tauri android build --target aarch64
+build	Build arm64 APK	2026-09-21T15:22:15.3067304Z ^[[36;1mpnpm tauri android build --target aarch64^[[0m
+build	Build arm64 APK	2026-09-21T15:22:15.3101700Z shell: /usr/bin/bash -e {0}
+build	Build arm64 APK	2026-09-21T15:22:15.3101981Z env:
+build	Build arm64 APK	2026-09-21T15:22:15.3102264Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+build	Build arm64 APK	2026-09-21T15:22:15.3102638Z   CARGO_HOME: /home/runner/.cargo
+build	Build arm64 APK	2026-09-21T15:22:15.3102928Z   CARGO_INCREMENTAL: 0
+build	Build arm64 APK	2026-09-21T15:22:15.3103176Z   CARGO_TERM_COLOR: always
+build	Build arm64 APK	2026-09-21T15:22:15.3103456Z   ANDROID_HOME: /usr/local/lib/android/sdk
+build	Build arm64 APK	2026-09-21T15:22:15.3103813Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+build	Build arm64 APK	2026-09-21T15:22:15.3104185Z   NDK_HOME: /usr/local/lib/android/sdk/ndk/26.3.11579264
+build	Build arm64 APK	2026-09-21T15:22:15.3104526Z ##[endgroup]
+build	Build arm64 APK	2026-09-21T15:22:15.6959846Z 
+build	Build arm64 APK	2026-09-21T15:22:15.6961281Z > rodroid-il2cppdumper@7.0.0 tauri /home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper
+build	Build arm64 APK	2026-09-21T15:22:15.6962505Z > tauri "android" "build" "--target" "aarch64"
+build	Build arm64 APK	2026-09-21T15:22:15.6962908Z 
+build	Build arm64 APK	2026-09-21T15:22:15.7974380Z         Info Using installed NDK: /usr/local/lib/android/sdk/ndk/26.3.11579264
+build	Build arm64 APK	2026-09-21T15:22:15.7987163Z         Info Looking up installed tauri packages to check mismatched versions...
+build	Build arm64 APK	2026-09-21T15:22:16.2411366Z      Running beforeBuildCommand `npm run build`
+build	Build arm64 APK	2026-09-21T15:22:16.3480197Z 
+build	Build arm64 APK	2026-09-21T15:22:16.3481183Z > rodroid-il2cppdumper@7.0.0 build
+build	Build arm64 APK	2026-09-21T15:22:16.3481666Z > vite build
+build	Build arm64 APK	2026-09-21T15:22:16.3481847Z 
+build	Build arm64 APK	2026-09-21T15:22:16.4991199Z ▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+build	Build arm64 APK	2026-09-21T15:22:16.4992253Z 
+build	Build arm64 APK	2026-09-21T15:22:16.4992514Z     tsconfig.json:2:13:
+build	Build arm64 APK	2026-09-21T15:22:16.4993279Z       2 │   "extends": "./.svelte-kit/tsconfig.json",
+build	Build arm64 APK	2026-09-21T15:22:16.4994081Z         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	Build arm64 APK	2026-09-21T15:22:16.4994421Z 
+build	Build arm64 APK	2026-09-21T15:22:17.4753912Z ^[[36mvite v6.4.3 ^[[32mbuilding SSR bundle for production...^[[36m^[[39m
+build	Build arm64 APK	2026-09-21T15:22:17.5180938Z transforming...
+build	Build arm64 APK	2026-09-21T15:22:17.6195196Z 3:22:17 PM [vite-plugin-svelte] src/routes/+page.svelte:115:12 Using `on:click` to listen to the click event is deprecated. Use the event attribute `onclick` instead
+build	Build arm64 APK	2026-09-21T15:22:17.6197042Z https://svelte.dev/e/event_directive_deprecated
+build	Build arm64 APK	2026-09-21T15:22:17.6199154Z 113:     <p style="color:#aaa;margin:0;font-family:sans-serif;font-size:14px;">Tap and hold the text below to copy it:</p>
+build	Build arm64 APK	2026-09-21T15:22:17.6202852Z 114:     <div style="flex:1;overflow-y:auto;background:#000;color:#0f0;padding:12px;border-radius:8px;white-space:pre-wrap;word-break:break-all;user-select:text;-webkit-user-select:text;font-family:monospace;font-size:12px;">{prevCrashLog}</div>
+build	Build arm64 APK	2026-09-21T15:22:17.6206453Z 115:     <button on:click={dismissPrevCrash} style="padding:12px;background:#3a3a3a;color:#fff;border:none;border-radius:8px;font-family:sans-serif;cursor:pointer;">Dismiss</button>
+build	Build arm64 APK	2026-09-21T15:22:17.6208160Z                                             ^
+build	Build arm64 APK	2026-09-21T15:22:17.6208871Z 116:   </div>
+build	Build arm64 APK	2026-09-21T15:22:17.6209654Z 117: {:else if $currentScreen === "splash"}
+build	Build arm64 APK	2026-09-21T15:22:19.7315219Z ^[[32m✓^[[39m 305 modules transformed.
+build	Build arm64 APK	2026-09-21T15:22:19.8485760Z rendering chunks...
+build	Build arm64 APK	2026-09-21T15:22:21.0165214Z ^[[36mvite v6.4.3 ^[[32mbuilding for production...^[[36m^[[39m
+build	Build arm64 APK	2026-09-21T15:22:21.0221486Z transforming...
+build	Build arm64 APK	2026-09-21T15:22:21.0693106Z 3:22:21 PM [vite-plugin-svelte] src/routes/+page.svelte:115:12 Using `on:click` to listen to the click event is deprecated. Use the event attribute `onclick` instead
+build	Build arm64 APK	2026-09-21T15:22:21.0694766Z https://svelte.dev/e/event_directive_deprecated
+build	Build arm64 APK	2026-09-21T15:22:21.0696418Z 113:     <p style="color:#aaa;margin:0;font-family:sans-serif;font-size:14px;">Tap and hold the text below to copy it:</p>
+build	Build arm64 APK	2026-09-21T15:22:21.0699569Z 114:     <div style="flex:1;overflow-y:auto;background:#000;color:#0f0;padding:12px;border-radius:8px;white-space:pre-wrap;word-break:break-all;user-select:text;-webkit-user-select:text;font-family:monospace;font-size:12px;">{prevCrashLog}</div>
+build	Build arm64 APK	2026-09-21T15:22:21.0722369Z 115:     <button on:click={dismissPrevCrash} style="padding:12px;background:#3a3a3a;color:#fff;border:none;border-radius:8px;font-family:sans-serif;cursor:pointer;">Dismiss</button>
+build	Build arm64 APK	2026-09-21T15:22:21.0724216Z                                             ^
+build	Build arm64 APK	2026-09-21T15:22:21.0725001Z 116:   </div>
+build	Build arm64 APK	2026-09-21T15:22:21.0725903Z 117: {:else if $currentScreen === "splash"}
+build	Build arm64 APK	2026-09-21T15:22:23.7901596Z ^[[32m✓^[[39m 325 modules transformed.
+build	Build arm64 APK	2026-09-21T15:22:23.8782519Z ^[[33mnode_modules/.pnpm/lottie-web@5.13.0/node_modules/lottie-web/build/player/lottie.js (14422:32): Use of eval in "node_modules/.pnpm/lottie-web@5.13.0/node_modules/lottie-web/build/player/lottie.js" is strongly discouraged as it poses security risks and may cause issues with minification.^[[39m
+build	Build arm64 APK	2026-09-21T15:22:23.9480286Z rendering chunks...
+build	Build arm64 APK	2026-09-21T15:22:24.0857443Z computing gzip size...
+build	Build arm64 APK	2026-09-21T15:22:24.1252952Z ^[[2m.svelte-kit/output/client/^[[22m^[[32m_app/version.json                              ^[[39m^[[1m^[[2m  0.03 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   0.05 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1255372Z ^[[2m.svelte-kit/output/client/^[[22m^[[32m.vite/manifest.json                            ^[[39m^[[1m^[[2m  3.42 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   0.68 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1257658Z ^[[2m.svelte-kit/output/client/^[[22m^[[35m_app/immutable/assets/2.BdQDq7sn.css           ^[[39m^[[1m^[[2m 21.26 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   3.84 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1312129Z ^[[2m.svelte-kit/output/client/^[[22m^[[35m_app/immutable/assets/0.BmLJpv91.css           ^[[39m^[[1m^[[2m 30.12 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   6.67 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1372172Z ^[[2m.svelte-kit/output/client/^[[22m^[[35m_app/immutable/assets/dumpEvents.Debns35Y.css  ^[[39m^[[1m^[[2m 36.92 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   5.31 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1402058Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/nodes/1.DFgDasPu.js             ^[[39m^[[1m^[[2m  0.45 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   0.31 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1422083Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/nodes/0.DlQ1jXsd.js             ^[[39m^[[1m^[[2m  0.46 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   0.34 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1489132Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/wbPk3Yxo.js              ^[[39m^[[1m^[[2m  1.37 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   0.66 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1552119Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/CaHbRKsQ.js              ^[[39m^[[1m^[[2m  5.79 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   2.52 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1582027Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/entry/app.CH0c0sCc.js           ^[[39m^[[1m^[[2m  6.22 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   2.89 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1672138Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/COkgOFaS.js              ^[[39m^[[1m^[[2m  6.47 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   2.92 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1732034Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/B7iv8BcE.js              ^[[39m^[[1m^[[2m 11.45 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   4.78 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1792073Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/entry/start.CqVncpS3.js         ^[[39m^[[1m^[[2m 22.89 kB^[[22m^[[1m^[[22m^[[2m │ gzip:   8.86 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1852072Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/C4Amax6H.js              ^[[39m^[[1m^[[2m 29.93 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  11.47 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1882000Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/chunks/5X7DHgT_.js              ^[[39m^[[1m^[[2m 54.23 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  18.81 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1911986Z ^[[2m.svelte-kit/output/client/^[[22m^[[36m_app/immutable/nodes/2.BhiSwoqu.js             ^[[39m^[[1m^[[2m396.50 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 104.04 kB^[[22m
+build	Build arm64 APK	2026-09-21T15:22:24.1971072Z ^[[32m✓ built in 3.10s^[[39m
+build	Build arm64 APK	2026-09-21T15:22:25.4032850Z ^[[2m.svelte-kit/output/server/^[[22m^[[32m.vite/manifest.json                             ^[[39m^[[1m^[[2m  4.27 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4035398Z ^[[2m.svelte-kit/output/server/^[[22m^[[35m_app/immutable/assets/_page.DCeHiV95.css        ^[[39m^[[1m^[[2m 21.03 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4039356Z ^[[2m.svelte-kit/output/server/^[[22m^[[35m_app/immutable/assets/_layout.CXQncSJK.css      ^[[39m^[[1m^[[2m 29.96 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4041798Z ^[[2m.svelte-kit/output/server/^[[22m^[[35m_app/immutable/assets/InputDialog.Cd8W3rnm.css  ^[[39m^[[1m^[[2m 36.38 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4044097Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mentries/pages/_layout.ts.js                     ^[[39m^[[1m^[[2m  0.07 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4045606Z ^[[2m.svelte-kit/output/server/^[[22m^[[36menv.js                                          ^[[39m^[[1m^[[2m  0.23 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4047063Z ^[[2m.svelte-kit/output/server/^[[22m^[[36minternal.js                                     ^[[39m^[[1m^[[2m  0.35 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4048596Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mentries/pages/_layout.svelte.js                 ^[[39m^[[1m^[[2m  0.38 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4049713Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/server.js                                ^[[39m^[[1m^[[2m  0.62 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4051627Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mentries/fallbacks/error.svelte.js               ^[[39m^[[1m^[[2m  1.01 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4052957Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/utils2.js                                ^[[39m^[[1m^[[2m  1.09 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4053996Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/index2.js                                ^[[39m^[[1m^[[2m  2.65 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4055005Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/internal.js                              ^[[39m^[[1m^[[2m  3.77 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4056215Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/exports.js                               ^[[39m^[[1m^[[2m  5.54 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4057219Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/uneval.js                                ^[[39m^[[1m^[[2m 19.91 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4058206Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/root.js                                  ^[[39m^[[1m^[[2m 29.37 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4059228Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mremote-entry.js                                 ^[[39m^[[1m^[[2m 36.79 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4060241Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/InputDialog.js                           ^[[39m^[[1m^[[2m 47.14 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4061583Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/utils.js                                 ^[[39m^[[1m^[[2m 59.71 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4062626Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mentries/pages/_page.svelte.js                   ^[[39m^[[1m^[[2m 96.74 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4063650Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mchunks/index.js                                 ^[[39m^[[1m^[[2m107.40 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4065185Z ^[[2m.svelte-kit/output/server/^[[22m^[[36mindex.js                                        ^[[39m^[[1m^[[2m135.14 kB^[[22m^[[1m^[[22m
+build	Build arm64 APK	2026-09-21T15:22:25.4066004Z ^[[32m✓ built in 7.90s^[[39m
+build	Build arm64 APK	2026-09-21T15:22:25.4066178Z 
+build	Build arm64 APK	2026-09-21T15:22:25.4066491Z Run npm run preview to preview your production build locally.
+build	Build arm64 APK	2026-09-21T15:22:25.4123542Z 
+build	Build arm64 APK	2026-09-21T15:22:25.4124425Z > Using @sveltejs/adapter-static
+build	Build arm64 APK	2026-09-21T15:22:25.4173229Z   Wrote site to "build"
+build	Build arm64 APK	2026-09-21T15:22:25.4173906Z   ✔ done
+build	Build arm64 APK	2026-09-21T15:22:25.9102270Z ^[[1m^[[92m    Updating^[[0m crates.io index
+build	Build arm64 APK	2026-09-21T15:22:26.9140991Z ^[[1m^[[92m Downloading^[[0m crates ...
+build	Build arm64 APK	2026-09-21T15:22:27.1425302Z ^[[1m^[[92m  Downloaded^[[0m adler2 v2.0.1
+build	Build arm64 APK	2026-09-21T15:22:27.1764195Z ^[[1m^[[92m  Downloaded^[[0m byteorder v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.1784112Z ^[[1m^[[92m  Downloaded^[[0m cssparser v0.29.6
+build	Build arm64 APK	2026-09-21T15:22:27.1814081Z ^[[1m^[[92m  Downloaded^[[0m futures-macro v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.1834142Z ^[[1m^[[92m  Downloaded^[[0m bytes v1.11.1
+build	Build arm64 APK	2026-09-21T15:22:27.1882447Z ^[[1m^[[92m  Downloaded^[[0m gio-sys v0.18.1
+build	Build arm64 APK	2026-09-21T15:22:27.1910612Z ^[[1m^[[92m  Downloaded^[[0m brotli-decompressor v5.0.0
+build	Build arm64 APK	2026-09-21T15:22:27.1976533Z ^[[1m^[[92m  Downloaded^[[0m phf_generator v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:27.1990365Z ^[[1m^[[92m  Downloaded^[[0m phf_codegen v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.2001867Z ^[[1m^[[92m  Downloaded^[[0m brotli v8.0.2
+build	Build arm64 APK	2026-09-21T15:22:27.2163531Z ^[[1m^[[92m  Downloaded^[[0m generic-array v0.14.7
+build	Build arm64 APK	2026-09-21T15:22:27.2179093Z ^[[1m^[[92m  Downloaded^[[0m phf_generator v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.2188969Z ^[[1m^[[92m  Downloaded^[[0m gdkwayland-sys v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.2196090Z ^[[1m^[[92m  Downloaded^[[0m phf_codegen v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:27.2204932Z ^[[1m^[[92m  Downloaded^[[0m dunce v1.0.5
+build	Build arm64 APK	2026-09-21T15:22:27.2214342Z ^[[1m^[[92m  Downloaded^[[0m glob v0.3.3
+build	Build arm64 APK	2026-09-21T15:22:27.2230109Z ^[[1m^[[92m  Downloaded^[[0m phf_generator v0.10.0
+build	Build arm64 APK	2026-09-21T15:22:27.2240068Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-crate v3.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.2254945Z ^[[1m^[[92m  Downloaded^[[0m rand_core v0.6.4
+build	Build arm64 APK	2026-09-21T15:22:27.2269759Z ^[[1m^[[92m  Downloaded^[[0m serde_core v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:27.2300720Z ^[[1m^[[92m  Downloaded^[[0m errno v0.3.14
+build	Build arm64 APK	2026-09-21T15:22:27.2318763Z ^[[1m^[[92m  Downloaded^[[0m png v0.17.16
+build	Build arm64 APK	2026-09-21T15:22:27.2363018Z ^[[1m^[[92m  Downloaded^[[0m pkg-config v0.3.33
+build	Build arm64 APK	2026-09-21T15:22:27.2378960Z ^[[1m^[[92m  Downloaded^[[0m quote v1.0.45
+build	Build arm64 APK	2026-09-21T15:22:27.2411453Z ^[[1m^[[92m  Downloaded^[[0m semver v1.0.28
+build	Build arm64 APK	2026-09-21T15:22:27.2438067Z ^[[1m^[[92m  Downloaded^[[0m serde_json v1.0.149
+build	Build arm64 APK	2026-09-21T15:22:27.2526343Z ^[[1m^[[92m  Downloaded^[[0m ppv-lite86 v0.2.21
+build	Build arm64 APK	2026-09-21T15:22:27.2543098Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-hack v0.5.20+deprecated
+build	Build arm64 APK	2026-09-21T15:22:27.2566594Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-crate v1.3.1
+build	Build arm64 APK	2026-09-21T15:22:27.2581611Z ^[[1m^[[92m  Downloaded^[[0m proc-macro2 v1.0.106
+build	Build arm64 APK	2026-09-21T15:22:27.2615302Z ^[[1m^[[92m  Downloaded^[[0m phf_generator v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.2628636Z ^[[1m^[[92m  Downloaded^[[0m dtoa-short v0.3.5
+build	Build arm64 APK	2026-09-21T15:22:27.2640036Z ^[[1m^[[92m  Downloaded^[[0m potential_utf v0.1.5
+build	Build arm64 APK	2026-09-21T15:22:27.2711225Z ^[[1m^[[92m  Downloaded^[[0m radium v0.7.0
+build	Build arm64 APK	2026-09-21T15:22:27.2724790Z ^[[1m^[[92m  Downloaded^[[0m rand_core v0.5.1
+build	Build arm64 APK	2026-09-21T15:22:27.2743092Z ^[[1m^[[92m  Downloaded^[[0m cpufeatures v0.2.17
+build	Build arm64 APK	2026-09-21T15:22:27.2763260Z ^[[1m^[[92m  Downloaded^[[0m dlopen2_derive v0.4.3
+build	Build arm64 APK	2026-09-21T15:22:27.2773597Z ^[[1m^[[92m  Downloaded^[[0m rand_chacha v0.2.2
+build	Build arm64 APK	2026-09-21T15:22:27.2789086Z ^[[1m^[[92m  Downloaded^[[0m powerfmt v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.2803073Z ^[[1m^[[92m  Downloaded^[[0m cssparser-macros v0.6.1
+build	Build arm64 APK	2026-09-21T15:22:27.2810737Z ^[[1m^[[92m  Downloaded^[[0m dyn-clone v1.0.20
+build	Build arm64 APK	2026-09-21T15:22:27.2828077Z ^[[1m^[[92m  Downloaded^[[0m gdkx11 v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.2848517Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-error v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:27.2887671Z ^[[1m^[[92m  Downloaded^[[0m precomputed-hash v0.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.2893645Z ^[[1m^[[92m  Downloaded^[[0m displaydoc v0.2.5
+build	Build arm64 APK	2026-09-21T15:22:27.2927584Z ^[[1m^[[92m  Downloaded^[[0m fxhash v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.2939451Z ^[[1m^[[92m  Downloaded^[[0m gethostname v1.1.0
+build	Build arm64 APK	2026-09-21T15:22:27.2949925Z ^[[1m^[[92m  Downloaded^[[0m iri-string v0.7.12
+build	Build arm64 APK	2026-09-21T15:22:27.3041500Z ^[[1m^[[92m  Downloaded^[[0m concurrent-queue v2.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.3057965Z ^[[1m^[[92m  Downloaded^[[0m embed-resource v3.0.8
+build	Build arm64 APK	2026-09-21T15:22:27.3074994Z ^[[1m^[[92m  Downloaded^[[0m getrandom v0.1.16
+build	Build arm64 APK	2026-09-21T15:22:27.3099265Z ^[[1m^[[92m  Downloaded^[[0m dirs v6.0.0
+build	Build arm64 APK	2026-09-21T15:22:27.3112188Z ^[[1m^[[92m  Downloaded^[[0m funty v2.0.0
+build	Build arm64 APK	2026-09-21T15:22:27.3119558Z ^[[1m^[[92m  Downloaded^[[0m futures-task v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.3131647Z ^[[1m^[[92m  Downloaded^[[0m gdk-pixbuf-sys v0.18.0
+build	Build arm64 APK	2026-09-21T15:22:27.3144338Z ^[[1m^[[92m  Downloaded^[[0m rand v0.8.5
+build	Build arm64 APK	2026-09-21T15:22:27.3178372Z ^[[1m^[[92m  Downloaded^[[0m crypto-common v0.1.7
+build	Build arm64 APK	2026-09-21T15:22:27.3187538Z ^[[1m^[[92m  Downloaded^[[0m futures-io v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.3196067Z ^[[1m^[[92m  Downloaded^[[0m getrandom v0.3.4
+build	Build arm64 APK	2026-09-21T15:22:27.3229912Z ^[[1m^[[92m  Downloaded^[[0m rand_pcg v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.3242843Z ^[[1m^[[92m  Downloaded^[[0m cfg-expr v0.15.8
+build	Build arm64 APK	2026-09-21T15:22:27.3271948Z ^[[1m^[[92m  Downloaded^[[0m fdeflate v0.3.7
+build	Build arm64 APK	2026-09-21T15:22:27.3287777Z ^[[1m^[[92m  Downloaded^[[0m getrandom v0.4.2
+build	Build arm64 APK	2026-09-21T15:22:27.3326347Z ^[[1m^[[92m  Downloaded^[[0m ref-cast v1.0.25
+build	Build arm64 APK	2026-09-21T15:22:27.3355648Z ^[[1m^[[92m  Downloaded^[[0m polling v3.11.0
+build	Build arm64 APK	2026-09-21T15:22:27.3385788Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-crate v2.0.2
+build	Build arm64 APK	2026-09-21T15:22:27.3398237Z ^[[1m^[[92m  Downloaded^[[0m serde v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:27.3432789Z ^[[1m^[[92m  Downloaded^[[0m serde-untagged v0.1.9
+build	Build arm64 APK	2026-09-21T15:22:27.3448822Z ^[[1m^[[92m  Downloaded^[[0m futures-sink v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.3457295Z ^[[1m^[[92m  Downloaded^[[0m cesu8 v1.1.0
+build	Build arm64 APK	2026-09-21T15:22:27.3465403Z ^[[1m^[[92m  Downloaded^[[0m cfg_aliases v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.3474770Z ^[[1m^[[92m  Downloaded^[[0m darling_core v0.23.0
+build	Build arm64 APK	2026-09-21T15:22:27.3530268Z ^[[1m^[[92m  Downloaded^[[0m futures-core v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.3543655Z ^[[1m^[[92m  Downloaded^[[0m gdk-sys v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.3563788Z ^[[1m^[[92m  Downloaded^[[0m gdkx11-sys v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.3572873Z ^[[1m^[[92m  Downloaded^[[0m glib-sys v0.18.1
+build	Build arm64 APK	2026-09-21T15:22:27.3592284Z ^[[1m^[[92m  Downloaded^[[0m cairo-rs v0.18.5
+build	Build arm64 APK	2026-09-21T15:22:27.3624550Z ^[[1m^[[92m  Downloaded^[[0m ctor v0.2.9
+build	Build arm64 APK	2026-09-21T15:22:27.3633984Z ^[[1m^[[92m  Downloaded^[[0m equivalent v1.0.2
+build	Build arm64 APK	2026-09-21T15:22:27.3643776Z ^[[1m^[[92m  Downloaded^[[0m fnv v1.0.7
+build	Build arm64 APK	2026-09-21T15:22:27.3652588Z ^[[1m^[[92m  Downloaded^[[0m form_urlencoded v1.2.2
+build	Build arm64 APK	2026-09-21T15:22:27.3660347Z ^[[1m^[[92m  Downloaded^[[0m raw-window-handle v0.6.2
+build	Build arm64 APK	2026-09-21T15:22:27.3678259Z ^[[1m^[[92m  Downloaded^[[0m sha2 v0.10.9
+build	Build arm64 APK	2026-09-21T15:22:27.3703732Z ^[[1m^[[92m  Downloaded^[[0m siphasher v1.0.2
+build	Build arm64 APK	2026-09-21T15:22:27.3717148Z ^[[1m^[[92m  Downloaded^[[0m field-offset v0.3.6
+build	Build arm64 APK	2026-09-21T15:22:27.3728139Z ^[[1m^[[92m  Downloaded^[[0m cargo-platform v0.1.9
+build	Build arm64 APK	2026-09-21T15:22:27.3739998Z ^[[1m^[[92m  Downloaded^[[0m proc-macro-error-attr v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:27.3749457Z ^[[1m^[[92m  Downloaded^[[0m same-file v1.0.6
+build	Build arm64 APK	2026-09-21T15:22:27.3763159Z ^[[1m^[[92m  Downloaded^[[0m soup3-sys v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.3776391Z ^[[1m^[[92m  Downloaded^[[0m either v1.15.0
+build	Build arm64 APK	2026-09-21T15:22:27.3790459Z ^[[1m^[[92m  Downloaded^[[0m fastrand v2.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.3804400Z ^[[1m^[[92m  Downloaded^[[0m find-msvc-tools v0.1.9
+build	Build arm64 APK	2026-09-21T15:22:27.3819868Z ^[[1m^[[92m  Downloaded^[[0m futures-executor v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.3833691Z ^[[1m^[[92m  Downloaded^[[0m gdk v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.3894195Z ^[[1m^[[92m  Downloaded^[[0m darling v0.23.0
+build	Build arm64 APK	2026-09-21T15:22:27.3949088Z ^[[1m^[[92m  Downloaded^[[0m dtoa v1.0.11
+build	Build arm64 APK	2026-09-21T15:22:27.3963998Z ^[[1m^[[92m  Downloaded^[[0m cairo-sys-rs v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.3973564Z ^[[1m^[[92m  Downloaded^[[0m futf v0.1.5
+build	Build arm64 APK	2026-09-21T15:22:27.3983337Z ^[[1m^[[92m  Downloaded^[[0m scroll_derive v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.3990978Z ^[[1m^[[92m  Downloaded^[[0m siphasher v0.3.11
+build	Build arm64 APK	2026-09-21T15:22:27.4003081Z ^[[1m^[[92m  Downloaded^[[0m stable_deref_trait v1.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.4011721Z ^[[1m^[[92m  Downloaded^[[0m phf_shared v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.4017595Z ^[[1m^[[92m  Downloaded^[[0m ref-cast-impl v1.0.25
+build	Build arm64 APK	2026-09-21T15:22:27.4025548Z ^[[1m^[[92m  Downloaded^[[0m socket2 v0.6.3
+build	Build arm64 APK	2026-09-21T15:22:27.4043492Z ^[[1m^[[92m  Downloaded^[[0m async-io v2.6.0
+build	Build arm64 APK	2026-09-21T15:22:27.4072615Z ^[[1m^[[92m  Downloaded^[[0m cfg-if v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:27.4085990Z ^[[1m^[[92m  Downloaded^[[0m darling_macro v0.23.0
+build	Build arm64 APK	2026-09-21T15:22:27.4092780Z ^[[1m^[[92m  Downloaded^[[0m dirs-sys v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.4104232Z ^[[1m^[[92m  Downloaded^[[0m event-listener-strategy v0.5.4
+build	Build arm64 APK	2026-09-21T15:22:27.4115490Z ^[[1m^[[92m  Downloaded^[[0m pin-project-lite v0.2.17
+build	Build arm64 APK	2026-09-21T15:22:27.4175296Z ^[[1m^[[92m  Downloaded^[[0m schemars_derive v0.8.22
+build	Build arm64 APK	2026-09-21T15:22:27.4190761Z ^[[1m^[[92m  Downloaded^[[0m serde_with_macros v3.18.0
+build	Build arm64 APK	2026-09-21T15:22:27.4209619Z ^[[1m^[[92m  Downloaded^[[0m option-ext v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.4218968Z ^[[1m^[[92m  Downloaded^[[0m phf_macros v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:27.4245148Z ^[[1m^[[92m  Downloaded^[[0m rand v0.7.3
+build	Build arm64 APK	2026-09-21T15:22:27.4280730Z ^[[1m^[[92m  Downloaded^[[0m rayon-core v1.13.0
+build	Build arm64 APK	2026-09-21T15:22:27.4318550Z ^[[1m^[[92m  Downloaded^[[0m rfd v0.16.0
+build	Build arm64 APK	2026-09-21T15:22:27.4368312Z ^[[1m^[[92m  Downloaded^[[0m schemars v1.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.4544738Z ^[[1m^[[92m  Downloaded^[[0m scroll v0.13.0
+build	Build arm64 APK	2026-09-21T15:22:27.4558517Z ^[[1m^[[92m  Downloaded^[[0m serde_derive v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:27.4589610Z ^[[1m^[[92m  Downloaded^[[0m serde_derive_internals v0.29.1
+build	Build arm64 APK	2026-09-21T15:22:27.4604281Z ^[[1m^[[92m  Downloaded^[[0m servo_arc v0.4.3
+build	Build arm64 APK	2026-09-21T15:22:27.4613105Z ^[[1m^[[92m  Downloaded^[[0m rand_chacha v0.3.1
+build	Build arm64 APK	2026-09-21T15:22:27.4624349Z ^[[1m^[[92m  Downloaded^[[0m rustversion v1.0.22
+build	Build arm64 APK	2026-09-21T15:22:27.4652608Z ^[[1m^[[92m  Downloaded^[[0m ruzstd v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:27.4704454Z ^[[1m^[[92m  Downloaded^[[0m slab v0.4.12
+build	Build arm64 APK	2026-09-21T15:22:27.4718093Z ^[[1m^[[92m  Downloaded^[[0m strsim v0.11.1
+build	Build arm64 APK	2026-09-21T15:22:27.4731250Z ^[[1m^[[92m  Downloaded^[[0m async-signal v0.2.14
+build	Build arm64 APK	2026-09-21T15:22:27.4745895Z ^[[1m^[[92m  Downloaded^[[0m convert_case v0.4.0
+build	Build arm64 APK	2026-09-21T15:22:27.4755296Z ^[[1m^[[92m  Downloaded^[[0m crossbeam-deque v0.8.6
+build	Build arm64 APK	2026-09-21T15:22:27.4769051Z ^[[1m^[[92m  Downloaded^[[0m enumflags2_derive v0.7.12
+build	Build arm64 APK	2026-09-21T15:22:27.4777321Z ^[[1m^[[92m  Downloaded^[[0m foldhash v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.4789753Z ^[[1m^[[92m  Downloaded^[[0m gdk-pixbuf v0.18.5
+build	Build arm64 APK	2026-09-21T15:22:27.4812940Z ^[[1m^[[92m  Downloaded^[[0m lazy_static v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.4830678Z ^[[1m^[[92m  Downloaded^[[0m rayon v1.11.0
+build	Build arm64 APK	2026-09-21T15:22:27.4925991Z ^[[1m^[[92m  Downloaded^[[0m android_system_properties v0.1.5
+build	Build arm64 APK	2026-09-21T15:22:27.4936211Z ^[[1m^[[92m  Downloaded^[[0m bitfield-macros v0.19.4
+build	Build arm64 APK	2026-09-21T15:22:27.4942838Z ^[[1m^[[92m  Downloaded^[[0m dpi v0.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.4956873Z ^[[1m^[[92m  Downloaded^[[0m endi v1.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.4965795Z ^[[1m^[[92m  Downloaded^[[0m async-recursion v1.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.5003994Z ^[[1m^[[92m  Downloaded^[[0m cargo_metadata v0.19.2
+build	Build arm64 APK	2026-09-21T15:22:27.5022192Z ^[[1m^[[92m  Downloaded^[[0m deranged v0.5.8
+build	Build arm64 APK	2026-09-21T15:22:27.5036452Z ^[[1m^[[92m  Downloaded^[[0m enumflags2 v0.7.12
+build	Build arm64 APK	2026-09-21T15:22:27.5050228Z ^[[1m^[[92m  Downloaded^[[0m erased-serde v0.4.10
+build	Build arm64 APK	2026-09-21T15:22:27.5074715Z ^[[1m^[[92m  Downloaded^[[0m getrandom v0.2.17
+build	Build arm64 APK	2026-09-21T15:22:27.5104248Z ^[[1m^[[92m  Downloaded^[[0m async-executor v1.14.0
+build	Build arm64 APK	2026-09-21T15:22:27.5123428Z ^[[1m^[[92m  Downloaded^[[0m cargo_toml v0.22.3
+build	Build arm64 APK	2026-09-21T15:22:27.5136751Z ^[[1m^[[92m  Downloaded^[[0m event-listener v5.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.5157179Z ^[[1m^[[92m  Downloaded^[[0m futures-channel v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.5176103Z ^[[1m^[[92m  Downloaded^[[0m phf_shared v0.10.0
+build	Build arm64 APK	2026-09-21T15:22:27.5183033Z ^[[1m^[[92m  Downloaded^[[0m serialize-to-javascript v0.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.5193864Z ^[[1m^[[92m  Downloaded^[[0m digest v0.10.7
+build	Build arm64 APK	2026-09-21T15:22:27.5212011Z ^[[1m^[[92m  Downloaded^[[0m dlopen2 v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:27.5245168Z ^[[1m^[[92m  Downloaded^[[0m flate2 v1.1.9
+build	Build arm64 APK	2026-09-21T15:22:27.5297002Z ^[[1m^[[92m  Downloaded^[[0m time-macros v0.2.27
+build	Build arm64 APK	2026-09-21T15:22:27.5319249Z ^[[1m^[[92m  Downloaded^[[0m scopeguard v1.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.5331257Z ^[[1m^[[92m  Downloaded^[[0m scroll-buffer v0.3.2
+build	Build arm64 APK	2026-09-21T15:22:27.5344632Z ^[[1m^[[92m  Downloaded^[[0m serde_spanned v0.6.9
+build	Build arm64 APK	2026-09-21T15:22:27.5355308Z ^[[1m^[[92m  Downloaded^[[0m string_cache_codegen v0.5.4
+build	Build arm64 APK	2026-09-21T15:22:27.5363032Z ^[[1m^[[92m  Downloaded^[[0m sys-locale v0.3.2
+build	Build arm64 APK	2026-09-21T15:22:27.5375929Z ^[[1m^[[92m  Downloaded^[[0m cookie v0.18.1
+build	Build arm64 APK	2026-09-21T15:22:27.5399934Z ^[[1m^[[92m  Downloaded^[[0m crossbeam-epoch v0.9.18
+build	Build arm64 APK	2026-09-21T15:22:27.5424524Z ^[[1m^[[92m  Downloaded^[[0m derive_more v0.99.20
+build	Build arm64 APK	2026-09-21T15:22:27.5472777Z ^[[1m^[[92m  Downloaded^[[0m futures-lite v2.6.1
+build	Build arm64 APK	2026-09-21T15:22:27.5489531Z ^[[1m^[[92m  Downloaded^[[0m glib-macros v0.18.5
+build	Build arm64 APK	2026-09-21T15:22:27.5515539Z ^[[1m^[[92m  Downloaded^[[0m phf_codegen v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.5521607Z ^[[1m^[[92m  Downloaded^[[0m crc32fast v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.5540031Z ^[[1m^[[92m  Downloaded^[[0m time-core v0.1.8
+build	Build arm64 APK	2026-09-21T15:22:27.5550996Z ^[[1m^[[92m  Downloaded^[[0m zerofrom-derive v0.1.7
+build	Build arm64 APK	2026-09-21T15:22:27.5561633Z ^[[1m^[[92m  Downloaded^[[0m atomic-waker v1.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.5573648Z ^[[1m^[[92m  Downloaded^[[0m bit-set v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.5586757Z ^[[1m^[[92m  Downloaded^[[0m signal-hook-registry v1.4.8
+build	Build arm64 APK	2026-09-21T15:22:27.5598687Z ^[[1m^[[92m  Downloaded^[[0m string_cache_codegen v0.6.1
+build	Build arm64 APK	2026-09-21T15:22:27.5605902Z ^[[1m^[[92m  Downloaded^[[0m is-docker v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.5616218Z ^[[1m^[[92m  Downloaded^[[0m memoffset v0.9.1
+build	Build arm64 APK	2026-09-21T15:22:27.5628600Z ^[[1m^[[92m  Downloaded^[[0m ndk-context v0.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.5635334Z ^[[1m^[[92m  Downloaded^[[0m phf_macros v0.10.0
+build	Build arm64 APK	2026-09-21T15:22:27.5641981Z ^[[1m^[[92m  Downloaded^[[0m shlex v1.3.0
+build	Build arm64 APK	2026-09-21T15:22:27.5654720Z ^[[1m^[[92m  Downloaded^[[0m phf v0.10.1
+build	Build arm64 APK	2026-09-21T15:22:27.5663455Z ^[[1m^[[92m  Downloaded^[[0m serde_repr v0.1.20
+build	Build arm64 APK	2026-09-21T15:22:27.5684045Z ^[[1m^[[92m  Downloaded^[[0m phf_macros v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.5694252Z ^[[1m^[[92m  Downloaded^[[0m rustc_version v0.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.5707063Z ^[[1m^[[92m  Downloaded^[[0m sync_wrapper v1.0.2
+build	Build arm64 APK	2026-09-21T15:22:27.5715112Z ^[[1m^[[92m  Downloaded^[[0m wyz v0.5.1
+build	Build arm64 APK	2026-09-21T15:22:27.5727110Z ^[[1m^[[92m  Downloaded^[[0m cfb v0.7.3
+build	Build arm64 APK	2026-09-21T15:22:27.5764024Z ^[[1m^[[92m  Downloaded^[[0m crossbeam-utils v0.8.21
+build	Build arm64 APK	2026-09-21T15:22:27.5790505Z ^[[1m^[[92m  Downloaded^[[0m markup5ever v0.38.0
+build	Build arm64 APK	2026-09-21T15:22:27.5802289Z ^[[1m^[[92m  Downloaded^[[0m matches v0.1.10
+build	Build arm64 APK	2026-09-21T15:22:27.5810116Z ^[[1m^[[92m  Downloaded^[[0m num-derive v0.4.2
+build	Build arm64 APK	2026-09-21T15:22:27.5828291Z ^[[1m^[[92m  Downloaded^[[0m serde_spanned v1.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.5839988Z ^[[1m^[[92m  Downloaded^[[0m serialize-to-javascript-impl v0.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.5847482Z ^[[1m^[[92m  Downloaded^[[0m include_dir_macros v0.7.4
+build	Build arm64 APK	2026-09-21T15:22:27.5854364Z ^[[1m^[[92m  Downloaded^[[0m ordered-stream v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.5865623Z ^[[1m^[[92m  Downloaded^[[0m rustc-hash v2.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.5878674Z ^[[1m^[[92m  Downloaded^[[0m tinystr v0.8.3
+build	Build arm64 APK	2026-09-21T15:22:27.5899383Z ^[[1m^[[92m  Downloaded^[[0m unicode-ident v1.0.24
+build	Build arm64 APK	2026-09-21T15:22:27.5927274Z ^[[1m^[[92m  Downloaded^[[0m camino v1.2.2
+build	Build arm64 APK	2026-09-21T15:22:27.5946832Z ^[[1m^[[92m  Downloaded^[[0m simd-adler32 v0.3.9
+build	Build arm64 APK	2026-09-21T15:22:27.5965621Z ^[[1m^[[92m  Downloaded^[[0m synstructure v0.13.2
+build	Build arm64 APK	2026-09-21T15:22:27.5975810Z ^[[1m^[[92m  Downloaded^[[0m async-process v2.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.5993422Z ^[[1m^[[92m  Downloaded^[[0m match_token v0.1.0
+build	Build arm64 APK	2026-09-21T15:22:27.6000001Z ^[[1m^[[92m  Downloaded^[[0m servo_arc v0.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.6008456Z ^[[1m^[[92m  Downloaded^[[0m unic-ucd-ident v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6024949Z ^[[1m^[[92m  Downloaded^[[0m combine v4.6.7
+build	Build arm64 APK	2026-09-21T15:22:27.6078683Z ^[[1m^[[92m  Downloaded^[[0m is-wsl v0.4.0
+build	Build arm64 APK	2026-09-21T15:22:27.6089560Z ^[[1m^[[92m  Downloaded^[[0m phf_shared v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:27.6098663Z ^[[1m^[[92m  Downloaded^[[0m piper v0.2.5
+build	Build arm64 APK	2026-09-21T15:22:27.6115880Z ^[[1m^[[92m  Downloaded^[[0m ipnet v2.12.0
+build	Build arm64 APK	2026-09-21T15:22:27.6132707Z ^[[1m^[[92m  Downloaded^[[0m zerofrom v0.1.7
+build	Build arm64 APK	2026-09-21T15:22:27.6142678Z ^[[1m^[[92m  Downloaded^[[0m paste v1.0.15
+build	Build arm64 APK	2026-09-21T15:22:27.6174540Z ^[[1m^[[92m  Downloaded^[[0m phf_shared v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.6183820Z ^[[1m^[[92m  Downloaded^[[0m soup3 v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.6225267Z ^[[1m^[[92m  Downloaded^[[0m string_cache v0.8.9
+build	Build arm64 APK	2026-09-21T15:22:27.6240672Z ^[[1m^[[92m  Downloaded^[[0m string_cache v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6257449Z ^[[1m^[[92m  Downloaded^[[0m tracing-attributes v0.1.31
+build	Build arm64 APK	2026-09-21T15:22:27.6284587Z ^[[1m^[[92m  Downloaded^[[0m libappindicator-sys v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6292226Z ^[[1m^[[92m  Downloaded^[[0m selectors v0.24.0
+build	Build arm64 APK	2026-09-21T15:22:27.6308915Z ^[[1m^[[92m  Downloaded^[[0m smallvec v1.15.1
+build	Build arm64 APK	2026-09-21T15:22:27.6329776Z ^[[1m^[[92m  Downloaded^[[0m hex v0.4.3
+build	Build arm64 APK	2026-09-21T15:22:27.6346395Z ^[[1m^[[92m  Downloaded^[[0m markup5ever v0.14.1
+build	Build arm64 APK	2026-09-21T15:22:27.6363136Z ^[[1m^[[92m  Downloaded^[[0m schemars v0.8.22
+build	Build arm64 APK	2026-09-21T15:22:27.6494210Z ^[[1m^[[92m  Downloaded^[[0m cssparser v0.36.0
+build	Build arm64 APK	2026-09-21T15:22:27.6518930Z ^[[1m^[[92m  Downloaded^[[0m tower-layer v0.3.3
+build	Build arm64 APK	2026-09-21T15:22:27.6531594Z ^[[1m^[[92m  Downloaded^[[0m tower-service v0.3.3
+build	Build arm64 APK	2026-09-21T15:22:27.6539372Z ^[[1m^[[92m  Downloaded^[[0m jni-sys v0.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.6550993Z ^[[1m^[[92m  Downloaded^[[0m thiserror v1.0.69
+build	Build arm64 APK	2026-09-21T15:22:27.6608619Z ^[[1m^[[92m  Downloaded^[[0m num-traits v0.2.19
+build	Build arm64 APK	2026-09-21T15:22:27.6635587Z ^[[1m^[[92m  Downloaded^[[0m gtk3-macros v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.6645036Z ^[[1m^[[92m  Downloaded^[[0m icu_provider v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.6672434Z ^[[1m^[[92m  Downloaded^[[0m jni-sys v0.3.1
+build	Build arm64 APK	2026-09-21T15:22:27.6683656Z ^[[1m^[[92m  Downloaded^[[0m litemap v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:27.6707034Z ^[[1m^[[92m  Downloaded^[[0m mime v0.3.17
+build	Build arm64 APK	2026-09-21T15:22:27.6720606Z ^[[1m^[[92m  Downloaded^[[0m unic-common v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6728536Z ^[[1m^[[92m  Downloaded^[[0m unic-ucd-version v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6738417Z ^[[1m^[[92m  Downloaded^[[0m heck v0.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.6752093Z ^[[1m^[[92m  Downloaded^[[0m heck v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.6765223Z ^[[1m^[[92m  Downloaded^[[0m infer v0.19.0
+build	Build arm64 APK	2026-09-21T15:22:27.6786454Z ^[[1m^[[92m  Downloaded^[[0m itoa v1.0.18
+build	Build arm64 APK	2026-09-21T15:22:27.6800865Z ^[[1m^[[92m  Downloaded^[[0m javascriptcore-rs-sys v1.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.6814558Z ^[[1m^[[92m  Downloaded^[[0m jni-sys-macros v0.4.1
+build	Build arm64 APK	2026-09-21T15:22:27.6821224Z ^[[1m^[[92m  Downloaded^[[0m json-patch v3.0.1
+build	Build arm64 APK	2026-09-21T15:22:27.6843758Z ^[[1m^[[92m  Downloaded^[[0m num_enum_derive v0.7.6
+build	Build arm64 APK	2026-09-21T15:22:27.6856135Z ^[[1m^[[92m  Downloaded^[[0m phf v0.13.1
+build	Build arm64 APK	2026-09-21T15:22:27.6868425Z ^[[1m^[[92m  Downloaded^[[0m toml_writer v1.1.1+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:27.6882187Z ^[[1m^[[92m  Downloaded^[[0m unic-char-property v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6894797Z ^[[1m^[[92m  Downloaded^[[0m unic-char-range v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.6908694Z ^[[1m^[[92m  Downloaded^[[0m version-compare v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.6921899Z ^[[1m^[[92m  Downloaded^[[0m want v0.3.1
+build	Build arm64 APK	2026-09-21T15:22:27.6930712Z ^[[1m^[[92m  Downloaded^[[0m autocfg v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.6949803Z ^[[1m^[[92m  Downloaded^[[0m derive_more v2.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.7081473Z ^[[1m^[[92m  Downloaded^[[0m utf8_iter v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:27.7091443Z ^[[1m^[[92m  Downloaded^[[0m base64 v0.22.1
+build	Build arm64 APK	2026-09-21T15:22:27.7129073Z ^[[1m^[[92m  Downloaded^[[0m bitfield v0.19.4
+build	Build arm64 APK	2026-09-21T15:22:27.7142973Z ^[[1m^[[92m  Downloaded^[[0m cc v1.2.60
+build	Build arm64 APK	2026-09-21T15:22:27.7172336Z ^[[1m^[[92m  Downloaded^[[0m crossbeam-channel v0.5.15
+build	Build arm64 APK	2026-09-21T15:22:27.7212224Z ^[[1m^[[92m  Downloaded^[[0m dom_query v0.27.0
+build	Build arm64 APK	2026-09-21T15:22:27.7261179Z ^[[1m^[[92m  Downloaded^[[0m gobject-sys v0.18.0
+build	Build arm64 APK	2026-09-21T15:22:27.7275252Z ^[[1m^[[92m  Downloaded^[[0m html5ever v0.29.1
+build	Build arm64 APK	2026-09-21T15:22:27.7309360Z ^[[1m^[[92m  Downloaded^[[0m javascriptcore-rs v1.1.2
+build	Build arm64 APK	2026-09-21T15:22:27.7335978Z ^[[1m^[[92m  Downloaded^[[0m keyboard-types v0.7.0
+build	Build arm64 APK	2026-09-21T15:22:27.7352919Z ^[[1m^[[92m  Downloaded^[[0m kuchikiki v0.8.8-speedreader
+build	Build arm64 APK	2026-09-21T15:22:27.7374672Z ^[[1m^[[92m  Downloaded^[[0m miniz_oxide v0.8.9
+build	Build arm64 APK	2026-09-21T15:22:27.7399489Z ^[[1m^[[92m  Downloaded^[[0m num-conv v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.7408078Z ^[[1m^[[92m  Downloaded^[[0m num_enum v0.7.6
+build	Build arm64 APK	2026-09-21T15:22:27.7466803Z ^[[1m^[[92m  Downloaded^[[0m phf v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:27.7479145Z ^[[1m^[[92m  Downloaded^[[0m tracing-core v0.1.36
+build	Build arm64 APK	2026-09-21T15:22:27.7505605Z ^[[1m^[[92m  Downloaded^[[0m tray-icon v0.21.3
+build	Build arm64 APK	2026-09-21T15:22:27.7529361Z ^[[1m^[[92m  Downloaded^[[0m utf-8 v0.7.6
+build	Build arm64 APK	2026-09-21T15:22:27.7541925Z ^[[1m^[[92m  Downloaded^[[0m version_check v0.9.5
+build	Build arm64 APK	2026-09-21T15:22:27.7554632Z ^[[1m^[[92m  Downloaded^[[0m writeable v0.6.3
+build	Build arm64 APK	2026-09-21T15:22:27.7574219Z ^[[1m^[[92m  Downloaded^[[0m yaxpeax-arch v0.3.2
+build	Build arm64 APK	2026-09-21T15:22:27.7599497Z ^[[1m^[[92m  Downloaded^[[0m yoke-derive v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:27.7611288Z ^[[1m^[[92m  Downloaded^[[0m zvariant_utils v3.3.0
+build	Build arm64 APK	2026-09-21T15:22:27.7625874Z ^[[1m^[[92m  Downloaded^[[0m alloc-stdlib v0.2.2
+build	Build arm64 APK	2026-09-21T15:22:27.7637568Z ^[[1m^[[92m  Downloaded^[[0m anyhow v1.0.102
+build	Build arm64 APK	2026-09-21T15:22:27.7677524Z ^[[1m^[[92m  Downloaded^[[0m derive_more-impl v2.1.1
+build	Build arm64 APK	2026-09-21T15:22:27.7730704Z ^[[1m^[[92m  Downloaded^[[0m html5ever v0.38.0
+build	Build arm64 APK	2026-09-21T15:22:27.7766626Z ^[[1m^[[92m  Downloaded^[[0m iana-time-zone v0.1.65
+build	Build arm64 APK	2026-09-21T15:22:27.7794968Z ^[[1m^[[92m  Downloaded^[[0m icu_properties v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:27.7818088Z ^[[1m^[[92m  Downloaded^[[0m idna_adapter v1.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.7827336Z ^[[1m^[[92m  Downloaded^[[0m jsonptr v0.6.3
+build	Build arm64 APK	2026-09-21T15:22:27.7853196Z ^[[1m^[[92m  Downloaded^[[0m libappindicator v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.7876979Z ^[[1m^[[92m  Downloaded^[[0m pango-sys v0.18.0
+build	Build arm64 APK	2026-09-21T15:22:27.7891052Z ^[[1m^[[92m  Downloaded^[[0m parking_lot v0.12.5
+build	Build arm64 APK	2026-09-21T15:22:27.7916174Z ^[[1m^[[92m  Downloaded^[[0m parking_lot_core v0.9.12
+build	Build arm64 APK	2026-09-21T15:22:27.7937056Z ^[[1m^[[92m  Downloaded^[[0m pathdiff v0.2.3
+build	Build arm64 APK	2026-09-21T15:22:27.7946227Z ^[[1m^[[92m  Downloaded^[[0m schemars v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.8090852Z ^[[1m^[[92m  Downloaded^[[0m selectors v0.36.1
+build	Build arm64 APK	2026-09-21T15:22:27.8113879Z ^[[1m^[[92m  Downloaded^[[0m system-deps v6.2.2
+build	Build arm64 APK	2026-09-21T15:22:27.8135155Z ^[[1m^[[92m  Downloaded^[[0m tauri-plugin-opener v2.5.3
+build	Build arm64 APK	2026-09-21T15:22:27.8172529Z ^[[1m^[[92m  Downloaded^[[0m tauri-runtime-wry v2.10.1
+build	Build arm64 APK	2026-09-21T15:22:27.8197957Z ^[[1m^[[92m  Downloaded^[[0m tauri-winres v0.3.5
+build	Build arm64 APK	2026-09-21T15:22:27.8214794Z ^[[1m^[[92m  Downloaded^[[0m tendril v0.4.3
+build	Build arm64 APK	2026-09-21T15:22:27.8233364Z ^[[1m^[[92m  Downloaded^[[0m tendril v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:27.8251750Z ^[[1m^[[92m  Downloaded^[[0m toml v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:27.8282668Z ^[[1m^[[92m  Downloaded^[[0m url v2.5.8
+build	Build arm64 APK	2026-09-21T15:22:27.8308227Z ^[[1m^[[92m  Downloaded^[[0m urlpattern v0.3.0
+build	Build arm64 APK	2026-09-21T15:22:27.8326565Z ^[[1m^[[92m  Downloaded^[[0m uuid v1.23.0
+build	Build arm64 APK	2026-09-21T15:22:27.8356102Z ^[[1m^[[92m  Downloaded^[[0m web_atoms v0.2.3
+build	Build arm64 APK	2026-09-21T15:22:27.8367096Z ^[[1m^[[92m  Downloaded^[[0m zerotrie v0.2.4
+build	Build arm64 APK	2026-09-21T15:22:27.8406375Z ^[[1m^[[92m  Downloaded^[[0m zvariant_derive v5.10.0
+build	Build arm64 APK	2026-09-21T15:22:27.8420137Z ^[[1m^[[92m  Downloaded^[[0m async-task v4.7.1
+build	Build arm64 APK	2026-09-21T15:22:27.8445941Z ^[[1m^[[92m  Downloaded^[[0m gio v0.18.4
+build	Build arm64 APK	2026-09-21T15:22:27.8612192Z ^[[1m^[[92m  Downloaded^[[0m gtk-sys v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:27.8646002Z ^[[1m^[[92m  Downloaded^[[0m hashbrown v0.12.3
+build	Build arm64 APK	2026-09-21T15:22:27.8683016Z ^[[1m^[[92m  Downloaded^[[0m http-body-util v0.1.3
+build	Build arm64 APK	2026-09-21T15:22:27.8701538Z ^[[1m^[[92m  Downloaded^[[0m httparse v1.10.1
+build	Build arm64 APK	2026-09-21T15:22:27.8726422Z ^[[1m^[[92m  Downloaded^[[0m hyper-util v0.1.20
+build	Build arm64 APK	2026-09-21T15:22:27.8788113Z ^[[1m^[[92m  Downloaded^[[0m indexmap v1.9.3
+build	Build arm64 APK	2026-09-21T15:22:27.8819648Z ^[[1m^[[92m  Downloaded^[[0m libloading v0.7.4
+build	Build arm64 APK	2026-09-21T15:22:27.8842936Z ^[[1m^[[92m  Downloaded^[[0m lz4_flex v0.11.6
+build	Build arm64 APK	2026-09-21T15:22:27.8863318Z ^[[1m^[[92m  Downloaded^[[0m muda v0.17.2
+build	Build arm64 APK	2026-09-21T15:22:27.8902350Z ^[[1m^[[92m  Downloaded^[[0m nodrop v0.1.14
+build	Build arm64 APK	2026-09-21T15:22:27.8910682Z ^[[1m^[[92m  Downloaded^[[0m once_cell v1.21.4
+build	Build arm64 APK	2026-09-21T15:22:27.8936471Z ^[[1m^[[92m  Downloaded^[[0m open v5.3.3
+build	Build arm64 APK	2026-09-21T15:22:27.8950927Z ^[[1m^[[92m  Downloaded^[[0m os_info v3.14.0
+build	Build arm64 APK	2026-09-21T15:22:27.8982439Z ^[[1m^[[92m  Downloaded^[[0m parking v2.2.1
+build	Build arm64 APK	2026-09-21T15:22:27.8993439Z ^[[1m^[[92m  Downloaded^[[0m phf v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.9000549Z ^[[1m^[[92m  Downloaded^[[0m tauri-build v2.5.6
+build	Build arm64 APK	2026-09-21T15:22:27.9017159Z ^[[1m^[[92m  Downloaded^[[0m tauri-codegen v2.5.5
+build	Build arm64 APK	2026-09-21T15:22:27.9032527Z ^[[1m^[[92m  Downloaded^[[0m toml_datetime v0.6.3
+build	Build arm64 APK	2026-09-21T15:22:27.9041915Z ^[[1m^[[92m  Downloaded^[[0m tower v0.5.3
+build	Build arm64 APK	2026-09-21T15:22:27.9144176Z ^[[1m^[[92m  Downloaded^[[0m x11 v2.21.0
+build	Build arm64 APK	2026-09-21T15:22:27.9175980Z ^[[1m^[[92m  Downloaded^[[0m futures-util v0.3.32
+build	Build arm64 APK	2026-09-21T15:22:27.9308562Z ^[[1m^[[92m  Downloaded^[[0m http v1.4.0
+build	Build arm64 APK	2026-09-21T15:22:27.9344307Z ^[[1m^[[92m  Downloaded^[[0m hyper v1.9.0
+build	Build arm64 APK	2026-09-21T15:22:27.9410231Z ^[[1m^[[92m  Downloaded^[[0m ident_case v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:27.9418644Z ^[[1m^[[92m  Downloaded^[[0m jni v0.21.1
+build	Build arm64 APK	2026-09-21T15:22:27.9486508Z ^[[1m^[[92m  Downloaded^[[0m lock_api v0.4.14
+build	Build arm64 APK	2026-09-21T15:22:27.9499688Z ^[[1m^[[92m  Downloaded^[[0m memchr v2.8.0
+build	Build arm64 APK	2026-09-21T15:22:27.9554161Z ^[[1m^[[92m  Downloaded^[[0m regex v1.12.3
+build	Build arm64 APK	2026-09-21T15:22:27.9606684Z ^[[1m^[[92m  Downloaded^[[0m regex-syntax v0.8.10
+build	Build arm64 APK	2026-09-21T15:22:27.9673103Z ^[[1m^[[92m  Downloaded^[[0m reqwest v0.13.2
+build	Build arm64 APK	2026-09-21T15:22:27.9728100Z ^[[1m^[[92m  Downloaded^[[0m rustix v1.1.4
+build	Build arm64 APK	2026-09-21T15:22:28.0001815Z ^[[1m^[[92m  Downloaded^[[0m toml_edit v0.25.11+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.0041027Z ^[[1m^[[92m  Downloaded^[[0m try-lock v0.2.5
+build	Build arm64 APK	2026-09-21T15:22:28.0049829Z ^[[1m^[[92m  Downloaded^[[0m unicode-segmentation v1.13.2
+build	Build arm64 APK	2026-09-21T15:22:28.0078054Z ^[[1m^[[92m  Downloaded^[[0m walkdir v2.5.0
+build	Build arm64 APK	2026-09-21T15:22:28.0096304Z ^[[1m^[[92m  Downloaded^[[0m zerovec v0.11.6
+build	Build arm64 APK	2026-09-21T15:22:28.0156476Z ^[[1m^[[92m  Downloaded^[[0m async-broadcast v0.7.2
+build	Build arm64 APK	2026-09-21T15:22:28.0173392Z ^[[1m^[[92m  Downloaded^[[0m async-trait v0.1.89
+build	Build arm64 APK	2026-09-21T15:22:28.0211089Z ^[[1m^[[92m  Downloaded^[[0m hashbrown v0.17.0
+build	Build arm64 APK	2026-09-21T15:22:28.0264120Z ^[[1m^[[92m  Downloaded^[[0m icu_properties_data v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.0372913Z ^[[1m^[[92m  Downloaded^[[0m pango v0.18.3
+build	Build arm64 APK	2026-09-21T15:22:28.0419012Z ^[[1m^[[92m  Downloaded^[[0m percent-encoding v2.3.2
+build	Build arm64 APK	2026-09-21T15:22:28.0427695Z ^[[1m^[[92m  Downloaded^[[0m serde_with v3.18.0
+build	Build arm64 APK	2026-09-21T15:22:28.0556314Z ^[[1m^[[92m  Downloaded^[[0m syn v1.0.109
+build	Build arm64 APK	2026-09-21T15:22:28.0648946Z ^[[1m^[[92m  Downloaded^[[0m syn v2.0.117
+build	Build arm64 APK	2026-09-21T15:22:28.0753797Z ^[[1m^[[92m  Downloaded^[[0m tao v0.34.8
+build	Build arm64 APK	2026-09-21T15:22:28.0861422Z ^[[1m^[[92m  Downloaded^[[0m target-lexicon v0.12.16
+build	Build arm64 APK	2026-09-21T15:22:28.0882577Z ^[[1m^[[92m  Downloaded^[[0m tauri-utils v2.8.3
+build	Build arm64 APK	2026-09-21T15:22:28.0922888Z ^[[1m^[[92m  Downloaded^[[0m thiserror-impl v2.0.18
+build	Build arm64 APK	2026-09-21T15:22:28.0937524Z ^[[1m^[[92m  Downloaded^[[0m tower-http v0.6.8
+build	Build arm64 APK	2026-09-21T15:22:28.1021162Z ^[[1m^[[92m  Downloaded^[[0m yaxpeax-arm v0.4.0
+build	Build arm64 APK	2026-09-21T15:22:28.1058298Z ^[[1m^[[92m  Downloaded^[[0m bitflags v1.3.2
+build	Build arm64 APK	2026-09-21T15:22:28.1091922Z ^[[1m^[[92m  Downloaded^[[0m block-buffer v0.10.4
+build	Build arm64 APK	2026-09-21T15:22:28.1102203Z ^[[1m^[[92m  Downloaded^[[0m hashbrown v0.16.1
+build	Build arm64 APK	2026-09-21T15:22:28.1152545Z ^[[1m^[[92m  Downloaded^[[0m include_dir v0.7.4
+build	Build arm64 APK	2026-09-21T15:22:28.1163018Z ^[[1m^[[92m  Downloaded^[[0m ndk v0.9.0
+build	Build arm64 APK	2026-09-21T15:22:28.1192947Z ^[[1m^[[92m  Downloaded^[[0m ndk-sys v0.6.0+11769913
+build	Build arm64 APK	2026-09-21T15:22:28.1257731Z ^[[1m^[[92m  Downloaded^[[0m regex-automata v0.4.14
+build	Build arm64 APK	2026-09-21T15:22:28.1394450Z ^[[1m^[[92m  Downloaded^[[0m tauri-plugin-os v2.3.2
+build	Build arm64 APK	2026-09-21T15:22:28.1425222Z ^[[1m^[[92m  Downloaded^[[0m time v0.3.47
+build	Build arm64 APK	2026-09-21T15:22:28.1556469Z ^[[1m^[[92m  Downloaded^[[0m toml_parser v1.1.2+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.1578970Z ^[[1m^[[92m  Downloaded^[[0m winnow v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:28.1677060Z ^[[1m^[[92m  Downloaded^[[0m wry v0.54.4
+build	Build arm64 APK	2026-09-21T15:22:28.1753949Z ^[[1m^[[92m  Downloaded^[[0m zerovec-derive v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:28.1768905Z ^[[1m^[[92m  Downloaded^[[0m bit-vec v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:28.1784702Z ^[[1m^[[92m  Downloaded^[[0m indexmap v2.14.0
+build	Build arm64 APK	2026-09-21T15:22:28.1826659Z ^[[1m^[[92m  Downloaded^[[0m webkit2gtk-sys v2.0.2
+build	Build arm64 APK	2026-09-21T15:22:28.1840472Z ^[[1m^[[92m  Downloaded^[[0m bitflags v2.11.0
+build	Build arm64 APK	2026-09-21T15:22:28.1883962Z ^[[1m^[[92m  Downloaded^[[0m bitvec v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:28.2053995Z ^[[1m^[[92m  Downloaded^[[0m chrono v0.4.44
+build	Build arm64 APK	2026-09-21T15:22:28.2119406Z ^[[1m^[[92m  Downloaded^[[0m tokio-util v0.7.18
+build	Build arm64 APK	2026-09-21T15:22:28.2196766Z ^[[1m^[[92m  Downloaded^[[0m yoke v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:28.2214755Z ^[[1m^[[92m  Downloaded^[[0m glib v0.18.5
+build	Build arm64 APK	2026-09-21T15:22:28.2320357Z ^[[1m^[[92m  Downloaded^[[0m ico v0.5.0
+build	Build arm64 APK	2026-09-21T15:22:28.2350675Z ^[[1m^[[92m  Downloaded^[[0m icu_normalizer v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.2387341Z ^[[1m^[[92m  Downloaded^[[0m icu_normalizer_data v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.2408387Z ^[[1m^[[92m  Downloaded^[[0m thiserror-impl v1.0.69
+build	Build arm64 APK	2026-09-21T15:22:28.2421522Z ^[[1m^[[92m  Downloaded^[[0m toml v0.9.12+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.2462541Z ^[[1m^[[92m  Downloaded^[[0m icu_locale_core v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.2533178Z ^[[1m^[[92m  Downloaded^[[0m log v0.4.29
+build	Build arm64 APK	2026-09-21T15:22:28.2557416Z ^[[1m^[[92m  Downloaded^[[0m tauri v2.10.3
+build	Build arm64 APK	2026-09-21T15:22:28.2705901Z ^[[1m^[[92m  Downloaded^[[0m x11-dl v2.21.0
+build	Build arm64 APK	2026-09-21T15:22:28.2737553Z ^[[1m^[[92m  Downloaded^[[0m new_debug_unreachable v1.0.6
+build	Build arm64 APK	2026-09-21T15:22:28.2747593Z ^[[1m^[[92m  Downloaded^[[0m tauri-plugin-dialog v2.7.0
+build	Build arm64 APK	2026-09-21T15:22:28.2796692Z ^[[1m^[[92m  Downloaded^[[0m winnow v0.5.40
+build	Build arm64 APK	2026-09-21T15:22:28.2883380Z ^[[1m^[[92m  Downloaded^[[0m http-body v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:28.2893031Z ^[[1m^[[92m  Downloaded^[[0m twox-hash v2.1.2
+build	Build arm64 APK	2026-09-21T15:22:28.2915232Z ^[[1m^[[92m  Downloaded^[[0m zbus v5.14.0
+build	Build arm64 APK	2026-09-21T15:22:28.3009378Z ^[[1m^[[92m  Downloaded^[[0m zvariant v5.10.0
+build	Build arm64 APK	2026-09-21T15:22:28.3079017Z ^[[1m^[[92m  Downloaded^[[0m atk v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:28.3114720Z ^[[1m^[[92m  Downloaded^[[0m object v0.38.1
+build	Build arm64 APK	2026-09-21T15:22:28.3224259Z ^[[1m^[[92m  Downloaded^[[0m tao-macros v0.1.3
+build	Build arm64 APK	2026-09-21T15:22:28.3233066Z ^[[1m^[[92m  Downloaded^[[0m mac v0.1.1
+build	Build arm64 APK	2026-09-21T15:22:28.3243187Z ^[[1m^[[92m  Downloaded^[[0m mio v1.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.3302646Z ^[[1m^[[92m  Downloaded^[[0m zbus_macros v5.14.0
+build	Build arm64 APK	2026-09-21T15:22:28.3318093Z ^[[1m^[[92m  Downloaded^[[0m aho-corasick v1.1.4
+build	Build arm64 APK	2026-09-21T15:22:28.3370050Z ^[[1m^[[92m  Downloaded^[[0m gtk v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:28.3628013Z ^[[1m^[[92m  Downloaded^[[0m nix v0.30.1
+build	Build arm64 APK	2026-09-21T15:22:28.3744218Z ^[[1m^[[92m  Downloaded^[[0m async-lock v3.4.2
+build	Build arm64 APK	2026-09-21T15:22:28.3766315Z ^[[1m^[[92m  Downloaded^[[0m tracing v0.1.44
+build	Build arm64 APK	2026-09-21T15:22:28.3923338Z ^[[1m^[[92m  Downloaded^[[0m tauri-plugin v2.5.4
+build	Build arm64 APK	2026-09-21T15:22:28.3934640Z ^[[1m^[[92m  Downloaded^[[0m tauri-macros v2.5.5
+build	Build arm64 APK	2026-09-21T15:22:28.3950089Z ^[[1m^[[92m  Downloaded^[[0m async-channel v2.5.0
+build	Build arm64 APK	2026-09-21T15:22:28.3963194Z ^[[1m^[[92m  Downloaded^[[0m toml_datetime v0.7.5+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.3975698Z ^[[1m^[[92m  Downloaded^[[0m libc v0.2.184
+build	Build arm64 APK	2026-09-21T15:22:28.4372605Z ^[[1m^[[92m  Downloaded^[[0m tokio v1.51.1
+build	Build arm64 APK	2026-09-21T15:22:28.4826220Z ^[[1m^[[92m  Downloaded^[[0m typeid v1.0.3
+build	Build arm64 APK	2026-09-21T15:22:28.4838943Z ^[[1m^[[92m  Downloaded^[[0m icu_collections v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:28.4903113Z ^[[1m^[[92m  Downloaded^[[0m tap v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:28.4912576Z ^[[1m^[[92m  Downloaded^[[0m alloc-no-stdlib v2.0.4
+build	Build arm64 APK	2026-09-21T15:22:28.4929537Z ^[[1m^[[92m  Downloaded^[[0m webkit2gtk v2.0.2
+build	Build arm64 APK	2026-09-21T15:22:28.4996072Z ^[[1m^[[92m  Downloaded^[[0m thiserror v2.0.18
+build	Build arm64 APK	2026-09-21T15:22:28.5063162Z ^[[1m^[[92m  Downloaded^[[0m tauri-plugin-fs v2.5.0
+build	Build arm64 APK	2026-09-21T15:22:28.5144055Z ^[[1m^[[92m  Downloaded^[[0m zerocopy v0.8.48
+build	Build arm64 APK	2026-09-21T15:22:28.5372450Z ^[[1m^[[92m  Downloaded^[[0m toml_edit v0.19.15
+build	Build arm64 APK	2026-09-21T15:22:28.5578063Z ^[[1m^[[92m  Downloaded^[[0m zmij v1.0.21
+build	Build arm64 APK	2026-09-21T15:22:28.5596174Z ^[[1m^[[92m  Downloaded^[[0m linux-raw-sys v0.12.1
+build	Build arm64 APK	2026-09-21T15:22:28.6218135Z ^[[1m^[[92m  Downloaded^[[0m zbus_names v4.3.1
+build	Build arm64 APK	2026-09-21T15:22:28.6233799Z ^[[1m^[[92m  Downloaded^[[0m toml_datetime v1.1.1+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.6246659Z ^[[1m^[[92m  Downloaded^[[0m tauri-runtime v2.10.1
+build	Build arm64 APK	2026-09-21T15:22:28.6263439Z ^[[1m^[[92m  Downloaded^[[0m atk-sys v0.18.2
+build	Build arm64 APK	2026-09-21T15:22:28.6277699Z ^[[1m^[[92m  Downloaded^[[0m toml_edit v0.20.2
+build	Build arm64 APK	2026-09-21T15:22:28.6489324Z ^[[1m^[[92m  Downloaded^[[0m winnow v0.7.15
+build	Build arm64 APK	2026-09-21T15:22:28.6615536Z ^[[1m^[[92m  Downloaded^[[0m blocking v1.6.2
+build	Build arm64 APK	2026-09-21T15:22:28.6631277Z ^[[1m^[[92m  Downloaded^[[0m typenum v1.19.0
+build	Build arm64 APK	2026-09-21T15:22:28.6667734Z ^[[1m^[[92m  Downloaded^[[0m idna v1.1.0
+build	Build arm64 APK	2026-09-21T15:22:28.6703136Z ^[[1m^[[92m  Downloaded^[[0m iced-x86 v1.21.0
+build	Build arm64 APK	2026-09-21T15:22:29.0283429Z ^[[1m^[[92m   Compiling^[[0m proc-macro2 v1.0.106
+build	Build arm64 APK	2026-09-21T15:22:29.0284540Z ^[[1m^[[92m   Compiling^[[0m unicode-ident v1.0.24
+build	Build arm64 APK	2026-09-21T15:22:29.0285728Z ^[[1m^[[92m   Compiling^[[0m quote v1.0.45
+build	Build arm64 APK	2026-09-21T15:22:29.0286927Z ^[[1m^[[92m   Compiling^[[0m libc v0.2.184
+build	Build arm64 APK	2026-09-21T15:22:31.8079664Z ^[[1m^[[92m   Compiling^[[0m cfg-if v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:31.8367677Z ^[[1m^[[92m   Compiling^[[0m siphasher v1.0.2
+build	Build arm64 APK	2026-09-21T15:22:32.1735940Z ^[[1m^[[92m   Compiling^[[0m serde_core v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:33.6176732Z ^[[1m^[[92m   Compiling^[[0m zerocopy v0.8.48
+build	Build arm64 APK	2026-09-21T15:22:35.2868246Z ^[[1m^[[92m   Compiling^[[0m syn v2.0.117
+build	Build arm64 APK	2026-09-21T15:22:36.5552277Z ^[[1m^[[92m   Compiling^[[0m getrandom v0.2.17
+build	Build arm64 APK	2026-09-21T15:22:36.7847480Z ^[[1m^[[92m   Compiling^[[0m rand_core v0.6.4
+build	Build arm64 APK	2026-09-21T15:22:36.9842853Z ^[[1m^[[92m   Compiling^[[0m icu_properties_data v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:37.0892390Z ^[[1m^[[92m   Compiling^[[0m icu_normalizer_data v2.2.0
+build	Build arm64 APK	2026-09-21T15:22:37.2002449Z ^[[1m^[[92m   Compiling^[[0m stable_deref_trait v1.2.1
+build	Build arm64 APK	2026-09-21T15:22:37.2489383Z ^[[1m^[[92m   Compiling^[[0m parking_lot_core v0.9.12
+build	Build arm64 APK	2026-09-21T15:22:37.4462284Z ^[[1m^[[92m   Compiling^[[0m zmij v1.0.21
+build	Build arm64 APK	2026-09-21T15:22:37.7126282Z ^[[1m^[[92m   Compiling^[[0m phf_shared v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:37.8952305Z ^[[1m^[[92m   Compiling^[[0m serde v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:38.5762257Z ^[[1m^[[92m   Compiling^[[0m ppv-lite86 v0.2.21
+build	Build arm64 APK	2026-09-21T15:22:39.1292224Z ^[[1m^[[92m   Compiling^[[0m rand_chacha v0.3.1
+build	Build arm64 APK	2026-09-21T15:22:39.5988950Z ^[[1m^[[92m   Compiling^[[0m synstructure v0.13.2
+build	Build arm64 APK	2026-09-21T15:22:39.8002041Z ^[[1m^[[92m   Compiling^[[0m rand v0.8.5
+build	Build arm64 APK	2026-09-21T15:22:39.8212039Z ^[[1m^[[92m   Compiling^[[0m smallvec v1.15.1
+build	Build arm64 APK	2026-09-21T15:22:40.0373363Z ^[[1m^[[92m   Compiling^[[0m winnow v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:40.6104114Z ^[[1m^[[92m   Compiling^[[0m phf_generator v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:40.9612181Z ^[[1m^[[92m   Compiling^[[0m thiserror v1.0.69
+build	Build arm64 APK	2026-09-21T15:22:41.2592270Z ^[[1m^[[92m   Compiling^[[0m siphasher v0.3.11
+build	Build arm64 APK	2026-09-21T15:22:41.4131886Z ^[[1m^[[92m   Compiling^[[0m toml_parser v1.1.2+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:22:42.1070249Z ^[[1m^[[92m   Compiling^[[0m getrandom v0.1.16
+build	Build arm64 APK	2026-09-21T15:22:42.3635594Z ^[[1m^[[92m   Compiling^[[0m memchr v2.8.0
+build	Build arm64 APK	2026-09-21T15:22:42.6782129Z ^[[1m^[[92m   Compiling^[[0m syn v1.0.109
+build	Build arm64 APK	2026-09-21T15:22:42.9872267Z ^[[1m^[[92m   Compiling^[[0m typeid v1.0.3
+build	Build arm64 APK	2026-09-21T15:22:43.4372168Z ^[[1m^[[92m   Compiling^[[0m hashbrown v0.17.0
+build	Build arm64 APK	2026-09-21T15:22:43.4942590Z ^[[1m^[[92m   Compiling^[[0m equivalent v1.0.2
+build	Build arm64 APK	2026-09-21T15:22:43.5392237Z ^[[1m^[[92m   Compiling^[[0m thiserror v2.0.18
+build	Build arm64 APK	2026-09-21T15:22:43.8805425Z ^[[1m^[[92m   Compiling^[[0m autocfg v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:43.9923808Z ^[[1m^[[92m   Compiling^[[0m rand_core v0.5.1
+build	Build arm64 APK	2026-09-21T15:22:44.1182165Z ^[[1m^[[92m   Compiling^[[0m indexmap v2.14.0
+build	Build arm64 APK	2026-09-21T15:22:44.9002155Z ^[[1m^[[92m   Compiling^[[0m strsim v0.11.1
+build	Build arm64 APK	2026-09-21T15:22:45.0668958Z ^[[1m^[[92m   Compiling^[[0m writeable v0.6.3
+build	Build arm64 APK	2026-09-21T15:22:45.2532809Z ^[[1m^[[92m   Compiling^[[0m itoa v1.0.18
+build	Build arm64 APK	2026-09-21T15:22:45.4462159Z ^[[1m^[[92m   Compiling^[[0m ident_case v1.0.1
+build	Build arm64 APK	2026-09-21T15:22:45.5171230Z ^[[1m^[[92m   Compiling^[[0m erased-serde v0.4.10
+build	Build arm64 APK	2026-09-21T15:22:45.7542059Z ^[[1m^[[92m   Compiling^[[0m litemap v0.8.2
+build	Build arm64 APK	2026-09-21T15:22:45.7882393Z ^[[1m^[[92m   Compiling^[[0m darling_core v0.23.0
+build	Build arm64 APK	2026-09-21T15:22:45.9112096Z ^[[1m^[[92m   Compiling^[[0m utf8_iter v1.0.4
+build	Build arm64 APK	2026-09-21T15:22:46.0132866Z ^[[1m^[[92m   Compiling^[[0m rand_pcg v0.2.1
+build	Build arm64 APK	2026-09-21T15:22:46.1021984Z ^[[1m^[[92m   Compiling^[[0m rand_chacha v0.2.2
+build	Build arm64 APK	2026-09-21T15:22:46.6472224Z ^[[1m^[[92m   Compiling^[[0m phf_shared v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:46.8382275Z ^[[1m^[[92m   Compiling^[[0m anyhow v1.0.102
+build	Build arm64 APK	2026-09-21T15:22:47.1603517Z ^[[1m^[[92m   Compiling^[[0m proc-macro-hack v0.5.20+deprecated
+build	Build arm64 APK	2026-09-21T15:22:47.5722554Z ^[[1m^[[92m   Compiling^[[0m rand v0.7.3
+build	Build arm64 APK	2026-09-21T15:22:48.4402164Z ^[[1m^[[92m   Compiling^[[0m phf_shared v0.10.0
+build	Build arm64 APK	2026-09-21T15:22:48.7202250Z ^[[1m^[[92m   Compiling^[[0m serde_json v1.0.149
+build	Build arm64 APK	2026-09-21T15:22:48.8380267Z ^[[1m^[[92m   Compiling^[[0m getrandom v0.4.2
+build	Build arm64 APK	2026-09-21T15:22:49.0212742Z ^[[1m^[[92m   Compiling^[[0m new_debug_unreachable v1.0.6
+build	Build arm64 APK	2026-09-21T15:22:49.0622244Z ^[[1m^[[92m   Compiling^[[0m byteorder v1.5.0
+build	Build arm64 APK	2026-09-21T15:22:49.2842107Z ^[[1m^[[92m   Compiling^[[0m scopeguard v1.2.0
+build	Build arm64 APK	2026-09-21T15:22:49.3402318Z ^[[1m^[[92m   Compiling^[[0m lock_api v0.4.14
+build	Build arm64 APK	2026-09-21T15:22:50.2945686Z ^[[1m^[[92m   Compiling^[[0m phf_generator v0.10.0
+build	Build arm64 APK	2026-09-21T15:22:50.3802380Z ^[[1m^[[92m   Compiling^[[0m phf_generator v0.8.0
+build	Build arm64 APK	2026-09-21T15:22:52.5192765Z ^[[1m^[[92m   Compiling^[[0m phf_codegen v0.11.3
+build	Build arm64 APK	2026-09-21T15:22:52.6312182Z ^[[1m^[[92m   Compiling^[[0m string_cache_codegen v0.5.4
+build	Build arm64 APK	2026-09-21T15:22:53.7372241Z ^[[1m^[[92m   Compiling^[[0m mac v0.1.1
+build	Build arm64 APK	2026-09-21T15:22:54.0422270Z ^[[1m^[[92m   Compiling^[[0m precomputed-hash v0.1.1
+build	Build arm64 APK	2026-09-21T15:22:54.0878562Z ^[[1m^[[92m   Compiling^[[0m futf v0.1.5
+build	Build arm64 APK	2026-09-21T15:22:54.1782792Z ^[[1m^[[92m   Compiling^[[0m markup5ever v0.14.1
+build	Build arm64 APK	2026-09-21T15:22:55.2582282Z ^[[1m^[[92m   Compiling^[[0m serde_derive v1.0.228
+build	Build arm64 APK	2026-09-21T15:22:55.3882172Z ^[[1m^[[92m   Compiling^[[0m zerofrom-derive v0.1.7
+build	Build arm64 APK	2026-09-21T15:22:57.7188554Z ^[[1m^[[92m   Compiling^[[0m yoke-derive v0.8.2
+build	Build arm64 APK	2026-09-21T15:23:02.7562336Z ^[[1m^[[92m   Compiling^[[0m zerovec-derive v0.11.3
+build	Build arm64 APK	2026-09-21T15:23:03.9912153Z ^[[1m^[[92m   Compiling^[[0m displaydoc v0.2.5
+build	Build arm64 APK	2026-09-21T15:23:04.1792078Z ^[[1m^[[92m   Compiling^[[0m zerofrom v0.1.7
+build	Build arm64 APK	2026-09-21T15:23:04.2772091Z ^[[1m^[[92m   Compiling^[[0m yoke v0.8.2
+build	Build arm64 APK	2026-09-21T15:23:04.4642728Z ^[[1m^[[92m   Compiling^[[0m thiserror-impl v1.0.69
+build	Build arm64 APK	2026-09-21T15:23:06.4802215Z ^[[1m^[[92m   Compiling^[[0m zerovec v0.11.6
+build	Build arm64 APK	2026-09-21T15:23:06.6817368Z ^[[1m^[[92m   Compiling^[[0m zerotrie v0.2.4
+build	Build arm64 APK	2026-09-21T15:23:07.0652858Z ^[[1m^[[92m   Compiling^[[0m phf_macros v0.11.3
+build	Build arm64 APK	2026-09-21T15:23:07.1325273Z ^[[1m^[[92m   Compiling^[[0m tinystr v0.8.3
+build	Build arm64 APK	2026-09-21T15:23:07.2152670Z ^[[1m^[[92m   Compiling^[[0m potential_utf v0.1.5
+build	Build arm64 APK	2026-09-21T15:23:07.2998971Z ^[[1m^[[92m   Compiling^[[0m icu_locale_core v2.2.0
+build	Build arm64 APK	2026-09-21T15:23:07.3392116Z ^[[1m^[[92m   Compiling^[[0m thiserror-impl v2.0.18
+build	Build arm64 APK	2026-09-21T15:23:09.5022271Z ^[[1m^[[92m   Compiling^[[0m cssparser-macros v0.6.1
+build	Build arm64 APK	2026-09-21T15:23:09.5352251Z ^[[1m^[[92m   Compiling^[[0m icu_provider v2.2.0
+build	Build arm64 APK	2026-09-21T15:23:09.8902374Z ^[[1m^[[92m   Compiling^[[0m icu_collections v2.2.0
+build	Build arm64 APK	2026-09-21T15:23:10.0432748Z ^[[1m^[[92m   Compiling^[[0m darling_macro v0.23.0
+build	Build arm64 APK	2026-09-21T15:23:10.5292708Z ^[[1m^[[92m   Compiling^[[0m icu_normalizer v2.2.0
+build	Build arm64 APK	2026-09-21T15:23:11.2032592Z ^[[1m^[[92m   Compiling^[[0m darling v0.23.0
+build	Build arm64 APK	2026-09-21T15:23:11.2532601Z ^[[1m^[[92m   Compiling^[[0m serde_with_macros v3.18.0
+build	Build arm64 APK	2026-09-21T15:23:11.4352331Z ^[[1m^[[92m   Compiling^[[0m icu_properties v2.2.0
+build	Build arm64 APK	2026-09-21T15:23:11.6935265Z ^[[1m^[[92m   Compiling^[[0m phf_macros v0.10.0
+build	Build arm64 APK	2026-09-21T15:23:12.9002245Z ^[[1m^[[92m   Compiling^[[0m idna_adapter v1.2.1
+build	Build arm64 APK	2026-09-21T15:23:12.9791979Z ^[[1m^[[92m   Compiling^[[0m cssparser v0.29.6
+build	Build arm64 APK	2026-09-21T15:23:13.1862132Z ^[[1m^[[92m   Compiling^[[0m phf_codegen v0.8.0
+build	Build arm64 APK	2026-09-21T15:23:14.8902822Z ^[[1m^[[92m   Compiling^[[0m parking_lot v0.12.5
+build	Build arm64 APK	2026-09-21T15:23:15.6232237Z ^[[1m^[[92m   Compiling^[[0m serde_spanned v1.1.1
+build	Build arm64 APK	2026-09-21T15:23:15.6843003Z ^[[1m^[[92m   Compiling^[[0m semver v1.0.28
+build	Build arm64 APK	2026-09-21T15:23:15.7152949Z ^[[1m^[[92m   Compiling^[[0m toml_datetime v0.7.5+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:23:16.0601967Z ^[[1m^[[92m   Compiling^[[0m winnow v0.7.15
+build	Build arm64 APK	2026-09-21T15:23:16.2325269Z ^[[1m^[[92m   Compiling^[[0m log v0.4.29
+build	Build arm64 APK	2026-09-21T15:23:16.3962041Z ^[[1m^[[92m   Compiling^[[0m bitflags v1.3.2
+build	Build arm64 APK	2026-09-21T15:23:16.4382023Z ^[[1m^[[92m   Compiling^[[0m utf-8 v0.7.6
+build	Build arm64 APK	2026-09-21T15:23:16.5692060Z ^[[1m^[[92m   Compiling^[[0m version_check v0.9.5
+build	Build arm64 APK	2026-09-21T15:23:17.0352653Z ^[[1m^[[92m   Compiling^[[0m percent-encoding v2.3.2
+build	Build arm64 APK	2026-09-21T15:23:17.2172387Z ^[[1m^[[92m   Compiling^[[0m toml_writer v1.1.1+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:23:17.3212230Z ^[[1m^[[92m   Compiling^[[0m dtoa v1.0.11
+build	Build arm64 APK	2026-09-21T15:23:17.4158121Z ^[[1m^[[92m   Compiling^[[0m dtoa-short v0.3.5
+build	Build arm64 APK	2026-09-21T15:23:17.4252283Z ^[[1m^[[92m   Compiling^[[0m form_urlencoded v1.2.2
+build	Build arm64 APK	2026-09-21T15:23:17.5119088Z ^[[1m^[[92m   Compiling^[[0m tendril v0.4.3
+build	Build arm64 APK	2026-09-21T15:23:17.6090021Z ^[[1m^[[92m   Compiling^[[0m uuid v1.23.0
+build	Build arm64 APK	2026-09-21T15:23:17.7609628Z ^[[1m^[[92m   Compiling^[[0m string_cache v0.8.9
+build	Build arm64 APK	2026-09-21T15:23:17.9622680Z ^[[1m^[[92m   Compiling^[[0m toml v0.9.12+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:23:18.0602010Z ^[[1m^[[92m   Compiling^[[0m phf v0.10.1
+build	Build arm64 APK	2026-09-21T15:23:18.1432159Z ^[[1m^[[92m   Compiling^[[0m selectors v0.24.0
+build	Build arm64 APK	2026-09-21T15:23:18.1862261Z ^[[1m^[[92m   Compiling^[[0m idna v1.1.0
+build	Build arm64 APK	2026-09-21T15:23:18.9492240Z ^[[1m^[[92m   Compiling^[[0m phf v0.11.3
+build	Build arm64 APK	2026-09-21T15:23:19.2392025Z ^[[1m^[[92m   Compiling^[[0m ctor v0.2.9
+build	Build arm64 APK	2026-09-21T15:23:20.2772696Z ^[[1m^[[92m   Compiling^[[0m indexmap v1.9.3
+build	Build arm64 APK	2026-09-21T15:23:20.4192160Z ^[[1m^[[92m   Compiling^[[0m aho-corasick v1.1.4
+build	Build arm64 APK	2026-09-21T15:23:20.6932301Z ^[[1m^[[92m   Compiling^[[0m alloc-no-stdlib v2.0.4
+build	Build arm64 APK	2026-09-21T15:23:20.7659945Z ^[[1m^[[92m   Compiling^[[0m convert_case v0.4.0
+build	Build arm64 APK	2026-09-21T15:23:21.8382248Z ^[[1m^[[92m   Compiling^[[0m matches v0.1.10
+build	Build arm64 APK	2026-09-21T15:23:21.8721152Z ^[[1m^[[92m   Compiling^[[0m unic-common v0.9.0
+build	Build arm64 APK	2026-09-21T15:23:21.9145218Z ^[[1m^[[92m   Compiling^[[0m camino v1.2.2
+build	Build arm64 APK	2026-09-21T15:23:21.9323845Z ^[[1m^[[92m   Compiling^[[0m regex-syntax v0.8.10
+build	Build arm64 APK	2026-09-21T15:23:22.0139582Z ^[[1m^[[92m   Compiling^[[0m nodrop v0.1.14
+build	Build arm64 APK	2026-09-21T15:23:22.0702442Z ^[[1m^[[92m   Compiling^[[0m unic-char-range v0.9.0
+build	Build arm64 APK	2026-09-21T15:23:22.1522471Z ^[[1m^[[92m   Compiling^[[0m unic-char-property v0.9.0
+build	Build arm64 APK	2026-09-21T15:23:22.2212414Z ^[[1m^[[92m   Compiling^[[0m servo_arc v0.2.0
+build	Build arm64 APK	2026-09-21T15:23:22.3862863Z ^[[1m^[[92m   Compiling^[[0m unic-ucd-version v0.9.0
+build	Build arm64 APK	2026-09-21T15:23:22.4346231Z ^[[1m^[[92m   Compiling^[[0m derive_more v0.99.20
+build	Build arm64 APK	2026-09-21T15:23:23.8512523Z ^[[1m^[[92m   Compiling^[[0m regex-automata v0.4.14
+build	Build arm64 APK	2026-09-21T15:23:25.3752307Z ^[[1m^[[92m   Compiling^[[0m alloc-stdlib v0.2.2
+build	Build arm64 APK	2026-09-21T15:23:26.5455069Z ^[[1m^[[92m   Compiling^[[0m url v2.5.8
+build	Build arm64 APK	2026-09-21T15:23:28.3412415Z ^[[1m^[[92m   Compiling^[[0m match_token v0.1.0
+build	Build arm64 APK	2026-09-21T15:23:28.7702678Z ^[[1m^[[92m   Compiling^[[0m fxhash v0.2.1
+build	Build arm64 APK	2026-09-21T15:23:28.8492404Z ^[[1m^[[92m   Compiling^[[0m phf v0.8.0
+build	Build arm64 APK	2026-09-21T15:23:29.0652541Z ^[[1m^[[92m   Compiling^[[0m serde_derive_internals v0.29.1
+build	Build arm64 APK	2026-09-21T15:23:30.0212328Z ^[[1m^[[92m   Compiling^[[0m hashbrown v0.12.3
+build	Build arm64 APK	2026-09-21T15:23:30.6222764Z ^[[1m^[[92m   Compiling^[[0m fnv v1.0.7
+build	Build arm64 APK	2026-09-21T15:23:30.6819330Z ^[[1m^[[92m   Compiling^[[0m schemars v0.8.22
+build	Build arm64 APK	2026-09-21T15:23:30.8202119Z ^[[1m^[[92m   Compiling^[[0m cfb v0.7.3
+build	Build arm64 APK	2026-09-21T15:23:32.7652661Z ^[[1m^[[92m   Compiling^[[0m html5ever v0.29.1
+build	Build arm64 APK	2026-09-21T15:23:34.1362273Z ^[[1m^[[92m   Compiling^[[0m regex v1.12.3
+build	Build arm64 APK	2026-09-21T15:23:34.2419273Z ^[[1m^[[92m   Compiling^[[0m schemars_derive v0.8.22
+build	Build arm64 APK	2026-09-21T15:23:34.4932165Z ^[[1m^[[92m   Compiling^[[0m brotli-decompressor v5.0.0
+build	Build arm64 APK	2026-09-21T15:23:35.1432814Z ^[[1m^[[92m   Compiling^[[0m unic-ucd-ident v0.9.0
+build	Build arm64 APK	2026-09-21T15:23:35.8552617Z ^[[1m^[[92m   Compiling^[[0m jsonptr v0.6.3
+build	Build arm64 APK	2026-09-21T15:23:36.9368752Z ^[[1m^[[92m   Compiling^[[0m cargo-platform v0.1.9
+build	Build arm64 APK	2026-09-21T15:23:37.0021902Z ^[[1m^[[92m   Compiling^[[0m dyn-clone v1.0.20
+build	Build arm64 APK	2026-09-21T15:23:37.0827252Z ^[[1m^[[92m   Compiling^[[0m same-file v1.0.6
+build	Build arm64 APK	2026-09-21T15:23:37.2272180Z ^[[1m^[[92m   Compiling^[[0m dunce v1.0.5
+build	Build arm64 APK	2026-09-21T15:23:37.2798088Z ^[[1m^[[92m   Compiling^[[0m typenum v1.19.0
+build	Build arm64 APK	2026-09-21T15:23:37.3195823Z ^[[1m^[[92m   Compiling^[[0m bytes v1.11.1
+build	Build arm64 APK	2026-09-21T15:23:38.0582663Z ^[[1m^[[92m   Compiling^[[0m http v1.4.0
+build	Build arm64 APK	2026-09-21T15:23:38.5052204Z ^[[1m^[[92m   Compiling^[[0m walkdir v2.5.0
+build	Build arm64 APK	2026-09-21T15:23:39.0362253Z ^[[1m^[[92m   Compiling^[[0m cargo_metadata v0.19.2
+build	Build arm64 APK	2026-09-21T15:23:40.1552773Z ^[[1m^[[92m   Compiling^[[0m kuchikiki v0.8.8-speedreader
+build	Build arm64 APK	2026-09-21T15:23:40.7142158Z ^[[1m^[[92m   Compiling^[[0m json-patch v3.0.1
+build	Build arm64 APK	2026-09-21T15:23:41.4752511Z ^[[1m^[[92m   Compiling^[[0m urlpattern v0.3.0
+build	Build arm64 APK	2026-09-21T15:23:42.1802746Z ^[[1m^[[92m   Compiling^[[0m brotli v8.0.2
+build	Build arm64 APK	2026-09-21T15:23:42.5202227Z ^[[1m^[[92m   Compiling^[[0m serde-untagged v0.1.9
+build	Build arm64 APK	2026-09-21T15:23:42.8432001Z ^[[1m^[[92m   Compiling^[[0m infer v0.19.0
+build	Build arm64 APK	2026-09-21T15:23:43.9161778Z ^[[1m^[[92m   Compiling^[[0m serde_with v3.18.0
+build	Build arm64 APK	2026-09-21T15:23:45.6692067Z ^[[1m^[[92m   Compiling^[[0m phf_shared v0.13.1
+build	Build arm64 APK	2026-09-21T15:23:45.9612475Z ^[[1m^[[92m   Compiling^[[0m glob v0.3.3
+build	Build arm64 APK	2026-09-21T15:23:46.1112361Z ^[[1m^[[92m   Compiling^[[0m fastrand v2.4.1
+build	Build arm64 APK	2026-09-21T15:23:46.2382205Z ^[[1m^[[92m   Compiling^[[0m phf_generator v0.13.1
+build	Build arm64 APK	2026-09-21T15:23:46.5522191Z ^[[1m^[[92m   Compiling^[[0m tauri-utils v2.8.3
+build	Build arm64 APK	2026-09-21T15:23:46.7082339Z ^[[1m^[[92m   Compiling^[[0m generic-array v0.14.7
+build	Build arm64 APK	2026-09-21T15:23:47.1738565Z ^[[1m^[[92m   Compiling^[[0m crc32fast v1.5.0
+build	Build arm64 APK	2026-09-21T15:23:47.4164225Z ^[[1m^[[92m   Compiling^[[0m heck v0.5.0
+build	Build arm64 APK	2026-09-21T15:23:47.6472233Z ^[[1m^[[92m   Compiling^[[0m shlex v1.3.0
+build	Build arm64 APK	2026-09-21T15:23:47.9012337Z ^[[1m^[[92m   Compiling^[[0m find-msvc-tools v0.1.9
+build	Build arm64 APK	2026-09-21T15:23:48.2842183Z ^[[1m^[[92m   Compiling^[[0m cc v1.2.60
+build	Build arm64 APK	2026-09-21T15:23:49.4552233Z ^[[1m^[[92m   Compiling^[[0m phf_codegen v0.13.1
+build	Build arm64 APK	2026-09-21T15:23:49.5650194Z ^[[1m^[[92m   Compiling^[[0m rustc_version v0.4.1
+build	Build arm64 APK	2026-09-21T15:23:49.8532052Z ^[[1m^[[92m   Compiling^[[0m option-ext v0.2.0
+build	Build arm64 APK	2026-09-21T15:23:49.9042299Z ^[[1m^[[92m   Compiling^[[0m pin-project-lite v0.2.17
+build	Build arm64 APK	2026-09-21T15:23:49.9593583Z ^[[1m^[[92m   Compiling^[[0m once_cell v1.21.4
+build	Build arm64 APK	2026-09-21T15:23:50.0884748Z ^[[1m^[[92m   Compiling^[[0m dirs-sys v0.5.0
+build	Build arm64 APK	2026-09-21T15:23:50.3081992Z ^[[1m^[[92m   Compiling^[[0m embed-resource v3.0.8
+build	Build arm64 APK	2026-09-21T15:23:50.8450329Z ^[[1m^[[92m   Compiling^[[0m bitflags v2.11.0
+build	Build arm64 APK	2026-09-21T15:23:51.1332197Z ^[[1m^[[92m   Compiling^[[0m futures-core v0.3.32
+build	Build arm64 APK	2026-09-21T15:23:51.2292257Z ^[[1m^[[92m   Compiling^[[0m crossbeam-utils v0.8.21
+build	Build arm64 APK	2026-09-21T15:23:51.5282050Z ^[[1m^[[92m   Compiling^[[0m tauri-winres v0.3.5
+build	Build arm64 APK	2026-09-21T15:23:53.2212678Z ^[[1m^[[92m   Compiling^[[0m dirs v6.0.0
+build	Build arm64 APK	2026-09-21T15:23:53.3292255Z ^[[1m^[[92m   Compiling^[[0m phf_macros v0.13.1
+build	Build arm64 APK	2026-09-21T15:23:53.8216954Z ^[[1m^[[92m   Compiling^[[0m cargo_toml v0.22.3
+build	Build arm64 APK	2026-09-21T15:23:54.8172323Z ^[[1m^[[92m   Compiling^[[0m jni-sys-macros v0.4.1
+build	Build arm64 APK	2026-09-21T15:23:56.7262114Z ^[[1m^[[92m   Compiling^[[0m jni-sys v0.3.1
+build	Build arm64 APK	2026-09-21T15:23:57.0181878Z ^[[1m^[[92m   Compiling^[[0m jni-sys v0.4.1
+build	Build arm64 APK	2026-09-21T15:23:57.5659734Z ^[[1m^[[92m   Compiling^[[0m phf v0.13.1
+build	Build arm64 APK	2026-09-21T15:23:57.6052798Z ^[[1m^[[92m   Compiling^[[0m tauri-build v2.5.6
+build	Build arm64 APK	2026-09-21T15:23:57.6872095Z ^[[1m^[[92m   Compiling^[[0m tauri-plugin v2.5.4
+build	Build arm64 APK	2026-09-21T15:24:00.5642320Z ^[[1m^[[92m   Compiling^[[0m string_cache_codegen v0.6.1
+build	Build arm64 APK	2026-09-21T15:24:01.8502444Z ^[[1m^[[92m   Compiling^[[0m toml_datetime v1.1.1+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:24:02.2012197Z ^[[1m^[[92m   Compiling^[[0m toml_edit v0.25.11+spec-1.1.0
+build	Build arm64 APK	2026-09-21T15:24:06.3162249Z ^[[1m^[[92m   Compiling^[[0m web_atoms v0.2.3
+build	Build arm64 APK	2026-09-21T15:24:11.1282144Z ^[[1m^[[92m   Compiling^[[0m socket2 v0.6.3
+build	Build arm64 APK	2026-09-21T15:24:11.4422194Z ^[[1m^[[92m   Compiling^[[0m mio v1.2.0
+build	Build arm64 APK	2026-09-21T15:24:11.9582093Z ^[[1m^[[92m   Compiling^[[0m simd-adler32 v0.3.9
+build	Build arm64 APK	2026-09-21T15:24:12.0300121Z ^[[1m^[[92m   Compiling^[[0m rustversion v1.0.22
+build	Build arm64 APK	2026-09-21T15:24:12.2152168Z ^[[1m^[[92m   Compiling^[[0m tokio v1.51.1
+build	Build arm64 APK	2026-09-21T15:24:15.9992744Z ^[[1m^[[92m   Compiling^[[0m string_cache v0.9.0
+build	Build arm64 APK	2026-09-21T15:24:16.3752200Z ^[[1m^[[92m   Compiling^[[0m proc-macro-crate v3.5.0
+build	Build arm64 APK	2026-09-21T15:24:21.9991946Z ^[[1m^[[92m   Compiling^[[0m adler2 v2.0.1
+build	Build arm64 APK	2026-09-21T15:24:22.1482159Z ^[[1m^[[92m   Compiling^[[0m num-conv v0.2.1
+build	Build arm64 APK	2026-09-21T15:24:22.2642188Z ^[[1m^[[92m   Compiling^[[0m time-core v0.1.8
+build	Build arm64 APK	2026-09-21T15:24:22.3772078Z ^[[1m^[[92m   Compiling^[[0m powerfmt v0.2.0
+build	Build arm64 APK	2026-09-21T15:24:22.6872121Z ^[[1m^[[92m   Compiling^[[0m foldhash v0.2.0
+build	Build arm64 APK	2026-09-21T15:24:23.0162052Z ^[[1m^[[92m   Compiling^[[0m deranged v0.5.8
+build	Build arm64 APK	2026-09-21T15:24:25.6912166Z ^[[1m^[[92m   Compiling^[[0m time-macros v0.2.27
+build	Build arm64 APK	2026-09-21T15:24:29.0612498Z ^[[1m^[[92m   Compiling^[[0m miniz_oxide v0.8.9
+build	Build arm64 APK	2026-09-21T15:24:29.3021999Z ^[[1m^[[92m   Compiling^[[0m tendril v0.5.0
+build	Build arm64 APK	2026-09-21T15:24:29.9539395Z ^[[1m^[[92m   Compiling^[[0m num_enum_derive v0.7.6
+build	Build arm64 APK	2026-09-21T15:24:32.3842637Z ^[[1m^[[92m   Compiling^[[0m http-body v1.0.1
+build	Build arm64 APK	2026-09-21T15:24:32.4802064Z ^[[1m^[[92m   Compiling^[[0m selectors v0.36.1
+build	Build arm64 APK	2026-09-21T15:24:33.1602059Z ^[[1m^[[92m   Compiling^[[0m combine v4.6.7
+build	Build arm64 APK	2026-09-21T15:24:34.3012614Z ^[[1m^[[92m   Compiling^[[0m cookie v0.18.1
+build	Build arm64 APK	2026-09-21T15:24:34.3952293Z ^[[1m^[[92m   Compiling^[[0m derive_more-impl v2.1.1
+build	Build arm64 APK	2026-09-21T15:24:36.6509995Z ^[[1m^[[92m   Compiling^[[0m cesu8 v1.1.0
+build	Build arm64 APK	2026-09-21T15:24:36.8388630Z ^[[1m^[[92m   Compiling^[[0m raw-window-handle v0.6.2
+build	Build arm64 APK	2026-09-21T15:24:37.5382821Z ^[[1m^[[92m   Compiling^[[0m httparse v1.10.1
+build	Build arm64 APK	2026-09-21T15:24:37.9272264Z ^[[1m^[[92m   Compiling^[[0m slab v0.4.12
+build	Build arm64 APK	2026-09-21T15:24:38.0662769Z ^[[1m^[[92m   Compiling^[[0m futures-task v0.3.32
+build	Build arm64 APK	2026-09-21T15:24:38.1122166Z ^[[1m^[[92m   Compiling^[[0m time v0.3.47
+build	Build arm64 APK	2026-09-21T15:24:38.1792228Z ^[[1m^[[92m   Compiling^[[0m futures-util v0.3.32
+build	Build arm64 APK	2026-09-21T15:24:38.7002320Z ^[[1m^[[92m   Compiling^[[0m derive_more v2.1.1
+build	Build arm64 APK	2026-09-21T15:24:40.0542073Z ^[[1m^[[92m   Compiling^[[0m jni v0.21.1
+build	Build arm64 APK	2026-09-21T15:24:41.5784166Z ^[[1m^[[92m   Compiling^[[0m num_enum v0.7.6
+build	Build arm64 APK	2026-09-21T15:24:41.6632607Z ^[[1m^[[92m   Compiling^[[0m markup5ever v0.38.0
+build	Build arm64 APK	2026-09-21T15:24:41.9262022Z ^[[1m^[[92m   Compiling^[[0m flate2 v1.1.9
+build	Build arm64 APK	2026-09-21T15:24:43.6042449Z ^[[1m^[[92m   Compiling^[[0m cssparser v0.36.0
+build	Build arm64 APK	2026-09-21T15:24:44.8372426Z ^[[1m^[[92m   Compiling^[[0m crypto-common v0.1.7
+build	Build arm64 APK	2026-09-21T15:24:44.9113738Z ^[[1m^[[92m   Compiling^[[0m block-buffer v0.10.4
+build	Build arm64 APK	2026-09-21T15:24:45.0482448Z ^[[1m^[[92m   Compiling^[[0m fdeflate v0.3.7
+build	Build arm64 APK	2026-09-21T15:24:45.0881997Z ^[[1m^[[92m   Compiling^[[0m ndk-sys v0.6.0+11769913
+build	Build arm64 APK	2026-09-21T15:24:45.9182339Z ^[[1m^[[92m   Compiling^[[0m tracing-core v0.1.36
+build	Build arm64 APK	2026-09-21T15:24:46.8621940Z ^[[1m^[[92m   Compiling^[[0m dpi v0.1.2
+build	Build arm64 APK	2026-09-21T15:24:46.8892299Z ^[[1m^[[92m   Compiling^[[0m tracing-attributes v0.1.31
+build	Build arm64 APK	2026-09-21T15:24:47.1972360Z ^[[1m^[[92m   Compiling^[[0m servo_arc v0.4.3
+build	Build arm64 APK	2026-09-21T15:24:47.4692258Z ^[[1m^[[92m   Compiling^[[0m bit-vec v0.8.0
+build	Build arm64 APK	2026-09-21T15:24:47.8015762Z ^[[1m^[[92m   Compiling^[[0m rustc-hash v2.1.2
+build	Build arm64 APK	2026-09-21T15:24:47.8747282Z ^[[1m^[[92m   Compiling^[[0m try-lock v0.2.5
+build	Build arm64 APK	2026-09-21T15:24:47.9424031Z ^[[1m^[[92m   Compiling^[[0m base64 v0.22.1
+build	Build arm64 APK	2026-09-21T15:24:48.7382248Z ^[[1m^[[92m   Compiling^[[0m tower-service v0.3.3
+build	Build arm64 APK	2026-09-21T15:24:49.3592590Z ^[[1m^[[92m   Compiling^[[0m want v0.3.1
+build	Build arm64 APK	2026-09-21T15:24:51.2962605Z ^[[1m^[[92m   Compiling^[[0m bit-set v0.8.0
+build	Build arm64 APK	2026-09-21T15:24:53.1792075Z ^[[1m^[[92m   Compiling^[[0m ndk v0.9.0
+build	Build arm64 APK	2026-09-21T15:24:53.5376790Z ^[[1m^[[92m   Compiling^[[0m png v0.17.16
+build	Build arm64 APK	2026-09-21T15:24:54.1712887Z ^[[1m^[[92m   Compiling^[[0m digest v0.10.7
+build	Build arm64 APK	2026-09-21T15:24:55.2791943Z ^[[1m^[[92m   Compiling^[[0m tracing v0.1.44
+build	Build arm64 APK	2026-09-21T15:24:56.0072304Z ^[[1m^[[92m   Compiling^[[0m html5ever v0.38.0
+build	Build arm64 APK	2026-09-21T15:24:58.9762113Z ^[[1m^[[92m   Compiling^[[0m crossbeam-channel v0.5.15
+build	Build arm64 APK	2026-09-21T15:24:59.5172274Z ^[[1m^[[92m   Compiling^[[0m sync_wrapper v1.0.2
+build	Build arm64 APK	2026-09-21T15:24:59.5772099Z ^[[1m^[[92m   Compiling^[[0m futures-channel v0.3.32
+build	Build arm64 APK	2026-09-21T15:24:59.7659360Z ^[[1m^[[92m   Compiling^[[0m tao-macros v0.1.3
+build	Build arm64 APK	2026-09-21T15:25:00.2231901Z ^[[1m^[[92m   Compiling^[[0m cpufeatures v0.2.17
+build	Build arm64 APK	2026-09-21T15:25:00.2772009Z ^[[1m^[[92m   Compiling^[[0m tauri-runtime v2.10.1
+build	Build arm64 APK	2026-09-21T15:25:01.2642200Z ^[[1m^[[92m   Compiling^[[0m tower-layer v0.3.3
+build	Build arm64 APK	2026-09-21T15:25:01.4472139Z ^[[1m^[[92m   Compiling^[[0m wry v0.54.4
+build	Build arm64 APK	2026-09-21T15:25:01.9446632Z ^[[1m^[[92m   Compiling^[[0m atomic-waker v1.1.2
+build	Build arm64 APK	2026-09-21T15:25:01.9968744Z ^[[1m^[[92m   Compiling^[[0m hyper v1.9.0
+build	Build arm64 APK	2026-09-21T15:25:02.3882215Z ^[[1m^[[92m   Compiling^[[0m tower v0.5.3
+build	Build arm64 APK	2026-09-21T15:25:02.9235176Z ^[[1m^[[92m   Compiling^[[0m sha2 v0.10.9
+build	Build arm64 APK	2026-09-21T15:25:04.6652922Z ^[[1m^[[92m   Compiling^[[0m dom_query v0.27.0
+build	Build arm64 APK	2026-09-21T15:25:05.5292692Z ^[[1m^[[92m   Compiling^[[0m ico v0.5.0
+build	Build arm64 APK	2026-09-21T15:25:07.2787295Z ^[[1m^[[92m   Compiling^[[0m futures-sink v0.3.32
+build	Build arm64 APK	2026-09-21T15:25:07.3472291Z ^[[1m^[[92m   Compiling^[[0m ndk-context v0.1.1
+build	Build arm64 APK	2026-09-21T15:25:07.4132287Z ^[[1m^[[92m   Compiling^[[0m getrandom v0.3.4
+build	Build arm64 APK	2026-09-21T15:25:07.7681074Z ^[[1m^[[92m   Compiling^[[0m iri-string v0.7.12
+build	Build arm64 APK	2026-09-21T15:25:10.6302211Z ^[[1m^[[92m   Compiling^[[0m ipnet v2.12.0
+build	Build arm64 APK	2026-09-21T15:25:10.6732673Z ^[[1m^[[92m   Compiling^[[0m tauri-runtime-wry v2.10.1
+build	Build arm64 APK	2026-09-21T15:25:11.2692900Z ^[[1m^[[92m   Compiling^[[0m tauri-codegen v2.5.5
+build	Build arm64 APK	2026-09-21T15:25:11.7245568Z ^[[1m^[[92m   Compiling^[[0m hyper-util v0.1.20
+build	Build arm64 APK	2026-09-21T15:25:12.1422123Z ^[[1m^[[92m   Compiling^[[0m tauri v2.10.3
+build	Build arm64 APK	2026-09-21T15:25:13.9932404Z ^[[1m^[[92m   Compiling^[[0m tower-http v0.6.8
+build	Build arm64 APK	2026-09-21T15:25:14.5472142Z ^[[1m^[[92m   Compiling^[[0m tao v0.34.8
+build	Build arm64 APK	2026-09-21T15:25:14.8612151Z ^[[1m^[[92m   Compiling^[[0m tokio-util v0.7.18
+build	Build arm64 APK	2026-09-21T15:25:17.0732232Z ^[[1m^[[92m   Compiling^[[0m http-body-util v0.1.3
+build	Build arm64 APK	2026-09-21T15:25:17.2997038Z ^[[1m^[[92m   Compiling^[[0m serialize-to-javascript-impl v0.1.2
+build	Build arm64 APK	2026-09-21T15:25:18.6282193Z ^[[1m^[[92m   Compiling^[[0m serialize-to-javascript v0.1.2
+build	Build arm64 APK	2026-09-21T15:25:18.7572024Z ^[[1m^[[92m   Compiling^[[0m reqwest v0.13.2
+build	Build arm64 APK	2026-09-21T15:25:25.6272763Z ^[[1m^[[92m   Compiling^[[0m tauri-plugin-fs v2.5.0
+build	Build arm64 APK	2026-09-21T15:25:25.9921972Z ^[[1m^[[92m   Compiling^[[0m serde_repr v0.1.20
+build	Build arm64 APK	2026-09-21T15:25:28.1012048Z ^[[1m^[[92m   Compiling^[[0m num-traits v0.2.19
+build	Build arm64 APK	2026-09-21T15:25:28.2202684Z ^[[1m^[[92m   Compiling^[[0m radium v0.7.0
+build	Build arm64 APK	2026-09-21T15:25:29.4042394Z ^[[1m^[[92m   Compiling^[[0m mime v0.3.17
+build	Build arm64 APK	2026-09-21T15:25:30.8362218Z ^[[1m^[[92m   Compiling^[[0m twox-hash v2.1.2
+build	Build arm64 APK	2026-09-21T15:25:30.9622122Z ^[[1m^[[92m   Compiling^[[0m tap v1.0.1
+build	Build arm64 APK	2026-09-21T15:25:31.0372171Z ^[[1m^[[92m   Compiling^[[0m rustix v1.1.4
+build	Build arm64 APK	2026-09-21T15:25:31.3458586Z ^[[1m^[[92m   Compiling^[[0m wyz v0.5.1
+build	Build arm64 APK	2026-09-21T15:25:32.9612904Z ^[[1m^[[92m   Compiling^[[0m tauri-plugin-os v2.3.2
+build	Build arm64 APK	2026-09-21T15:25:33.0292303Z ^[[1m^[[92m   Compiling^[[0m tauri-plugin-opener v2.5.3
+build	Build arm64 APK	2026-09-21T15:25:33.3370857Z ^[[1m^[[92m   Compiling^[[0m tauri-plugin-dialog v2.7.0
+build	Build arm64 APK	2026-09-21T15:25:33.7342012Z ^[[1m^[[92m   Compiling^[[0m crossbeam-epoch v0.9.18
+build	Build arm64 APK	2026-09-21T15:25:33.9832592Z ^[[1m^[[92m   Compiling^[[0m is-docker v0.2.0
+build	Build arm64 APK	2026-09-21T15:25:34.1312171Z ^[[1m^[[92m   Compiling^[[0m scroll_derive v0.13.1
+build	Build arm64 APK	2026-09-21T15:25:34.1542856Z ^[[1m^[[92m   Compiling^[[0m errno v0.3.14
+build	Build arm64 APK	2026-09-21T15:25:34.2314309Z ^[[1m^[[92m   Compiling^[[0m rayon-core v1.13.0
+build	Build arm64 APK	2026-09-21T15:25:34.3271997Z ^[[1m^[[92m   Compiling^[[0m funty v2.0.0
+build	Build arm64 APK	2026-09-21T15:25:35.3472111Z ^[[1m^[[92m   Compiling^[[0m object v0.38.1
+build	Build arm64 APK	2026-09-21T15:25:35.5791804Z ^[[1m^[[92m   Compiling^[[0m paste v1.0.15
+build	Build arm64 APK	2026-09-21T15:25:35.8582285Z ^[[1m^[[92m   Compiling^[[0m linux-raw-sys v0.12.1
+build	Build arm64 APK	2026-09-21T15:25:37.7473293Z ^[[1m^[[92m   Compiling^[[0m scroll v0.13.0
+build	Build arm64 APK	2026-09-21T15:25:38.0501925Z ^[[1m^[[92m   Compiling^[[0m bitvec v1.0.1
+build	Build arm64 APK	2026-09-21T15:25:38.2422094Z ^[[1m^[[92m   Compiling^[[0m is-wsl v0.4.0
+build	Build arm64 APK	2026-09-21T15:25:38.3532091Z ^[[1m^[[92m   Compiling^[[0m crossbeam-deque v0.8.6
+build	Build arm64 APK	2026-09-21T15:25:39.0352023Z ^[[1m^[[92m   Compiling^[[0m ruzstd v0.8.2
+build	Build arm64 APK	2026-09-21T15:25:40.6952312Z ^[[1m^[[92m   Compiling^[[0m hashbrown v0.16.1
+build	Build arm64 APK	2026-09-21T15:25:41.0037309Z ^[[1m^[[92m   Compiling^[[0m bitfield-macros v0.19.4
+build	Build arm64 APK	2026-09-21T15:25:41.4192369Z ^[[1m^[[92m   Compiling^[[0m android_system_properties v0.1.5
+build	Build arm64 APK	2026-09-21T15:25:41.5292171Z ^[[1m^[[92m   Compiling^[[0m pathdiff v0.2.3
+build	Build arm64 APK	2026-09-21T15:25:41.5912191Z ^[[1m^[[92m   Compiling^[[0m open v5.3.3
+build	Build arm64 APK	2026-09-21T15:25:41.7312011Z ^[[1m^[[92m   Compiling^[[0m os_info v3.14.0
+build	Build arm64 APK	2026-09-21T15:25:43.2652018Z ^[[1m^[[92m   Compiling^[[0m bitfield v0.19.4
+build	Build arm64 APK	2026-09-21T15:25:43.3472095Z ^[[1m^[[92m   Compiling^[[0m gethostname v1.1.0
+build	Build arm64 APK	2026-09-21T15:25:43.5762126Z ^[[1m^[[92m   Compiling^[[0m scroll-buffer v0.3.2
+build	Build arm64 APK	2026-09-21T15:25:43.7212238Z ^[[1m^[[92m   Compiling^[[0m yaxpeax-arch v0.3.2
+build	Build arm64 APK	2026-09-21T15:25:44.2783045Z ^[[1m^[[92m   Compiling^[[0m rodroid-il2cppdumper v7.0.0 (/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri)
+build	Build arm64 APK	2026-09-21T15:25:44.4253534Z ^[[1m^[[92m   Compiling^[[0m dotnetdll-macros v0.1.0 (/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/dotnetdll-main/dotnetdll-macros)
+build	Build arm64 APK	2026-09-21T15:25:44.4852230Z ^[[1m^[[92m   Compiling^[[0m num-derive v0.4.2
+build	Build arm64 APK	2026-09-21T15:25:45.9652210Z ^[[1m^[[92m   Compiling^[[0m tauri-macros v2.5.5
+build	Build arm64 APK	2026-09-21T15:25:47.2632708Z ^[[1m^[[92m   Compiling^[[0m sys-locale v0.3.2
+build	Build arm64 APK	2026-09-21T15:25:47.3752712Z ^[[1m^[[92m   Compiling^[[0m include_dir_macros v0.7.4
+build	Build arm64 APK	2026-09-21T15:25:48.1565311Z ^[[1m^[[92m   Compiling^[[0m lazy_static v1.5.0
+build	Build arm64 APK	2026-09-21T15:25:48.2162182Z ^[[1m^[[92m   Compiling^[[0m either v1.15.0
+build	Build arm64 APK	2026-09-21T15:25:48.3752738Z ^[[1m^[[92m   Compiling^[[0m rayon v1.11.0
+build	Build arm64 APK	2026-09-21T15:25:50.4022599Z ^[[1m^[[92m   Compiling^[[0m iced-x86 v1.21.0
+build	Build arm64 APK	2026-09-21T15:25:50.8852212Z ^[[1m^[[92m   Compiling^[[0m include_dir v0.7.4
+build	Build arm64 APK	2026-09-21T15:25:51.0192319Z ^[[1m^[[92m   Compiling^[[0m yaxpeax-arm v0.4.0
+build	Build arm64 APK	2026-09-21T15:25:51.2893196Z ^[[1m^[[92m   Compiling^[[0m dotnetdll v0.1.3 (/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/dotnetdll-main)
+build	Build arm64 APK	2026-09-21T15:25:53.7252122Z ^[[1m^[[92m   Compiling^[[0m lz4_flex v0.11.6
+build	Build arm64 APK	2026-09-21T15:26:11.8954813Z ^[[1m^[[33mwarning^[[0m^[[1m: value assigned to `property_type_name` is never read^[[0m
+build	Build arm64 APK	2026-09-21T15:26:11.8955766Z    ^[[1m^[[94m--> ^[[0msrc/output/decompiler.rs:623:120
+build	Build arm64 APK	2026-09-21T15:26:11.8956236Z     ^[[1m^[[94m|^[[0m
+build	Build arm64 APK	2026-09-21T15:26:11.8957716Z ^[[1m^[[94m623^[[0m ^[[1m^[[94m|^[[0m ^[[1m^[[94m...^[[0m   let Some(param_def) = metadata.parameter_defs.get(method_def.parameter_start as usize).cloned() else { property_type_name = "^[[1m^[[94m...^[[0m
+build	Build arm64 APK	2026-09-21T15:26:11.8959313Z     ^[[1m^[[94m|^[[0m                                                                                                              ^[[1m^[[33m^^^^^^^^^^^^^^^^^^^[[0m
+build	Build arm64 APK	2026-09-21T15:26:11.8959925Z     ^[[1m^[[94m|^[[0m
+build	Build arm64 APK	2026-09-21T15:26:11.8960729Z     ^[[1m^[[94m= ^[[0m^[[1mhelp^[[0m: maybe it is overwritten before being read?
+build	Build arm64 APK	2026-09-21T15:26:11.8961611Z     ^[[1m^[[94m= ^[[0m^[[1mnote^[[0m: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+build	Build arm64 APK	2026-09-21T15:26:11.8962028Z 
+build	Build arm64 APK	2026-09-21T15:27:09.4758712Z ^[[1m^[[33mwarning^[[0m: `rodroid-il2cppdumper` (lib) generated 1 warning
+build	Build arm64 APK	2026-09-21T15:27:09.4759611Z ^[[1m^[[92m    Finished^[[0m `release` profile [optimized] target(s) in 4m 43s
+build	Build arm64 APK	2026-09-21T15:27:09.6128354Z         Info symlinking lib "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" in jniLibs dir "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a"
+build	Build arm64 APK	2026-09-21T15:27:09.6179001Z         Info "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" requires shared lib "libandroid.so"
+build	Build arm64 APK	2026-09-21T15:27:09.6181525Z         Info "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" requires shared lib "libdl.so"
+build	Build arm64 APK	2026-09-21T15:27:09.6183237Z         Info "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" requires shared lib "liblog.so"
+build	Build arm64 APK	2026-09-21T15:27:09.6184934Z         Info "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" requires shared lib "libm.so"
+build	Build arm64 APK	2026-09-21T15:27:09.6186569Z         Info "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so" requires shared lib "libc.so"
+build	Build arm64 APK	2026-09-21T15:27:09.6347953Z         Info symlink at "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/librodroid_il2cppdumper_lib.so" points to "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/target/aarch64-linux-android/release/librodroid_il2cppdumper_lib.so"
+build	Build arm64 APK	2026-09-21T15:27:09.7360841Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+build	Build arm64 APK	2026-09-21T15:27:10.0759019Z 
+build	Build arm64 APK	2026-09-21T15:27:10.0766160Z Exception in thread "main" java.io.IOException: Server returned HTTP response code: 504 for URL: https://github.com/gradle/gradle-distributions/releases/download/v8.14.3/gradle-8.14.3-bin.zip
+build	Build arm64 APK	2026-09-21T15:27:10.0768801Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2059)
+build	Build arm64 APK	2026-09-21T15:27:10.0771873Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1644)
+build	Build arm64 APK	2026-09-21T15:27:10.0773680Z 	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+build	Build arm64 APK	2026-09-21T15:27:10.0775339Z 	at org.gradle.wrapper.Download.downloadInternal(Download.java:87)
+build	Build arm64 APK	2026-09-21T15:27:10.0776488Z 	at org.gradle.wrapper.Download.download(Download.java:67)
+build	Build arm64 APK	2026-09-21T15:27:10.0777545Z 	at org.gradle.wrapper.Install$1.call(Install.java:68)
+build	Build arm64 APK	2026-09-21T15:27:10.0778556Z 	at org.gradle.wrapper.Install$1.call(Install.java:48)
+build	Build arm64 APK	2026-09-21T15:27:10.0779768Z 	at org.gradle.wrapper.ExclusiveFileAccessManager.access(ExclusiveFileAccessManager.java:69)
+build	Build arm64 APK	2026-09-21T15:27:10.0781087Z 	at org.gradle.wrapper.Install.createDist(Install.java:48)
+build	Build arm64 APK	2026-09-21T15:27:10.0782034Z 	at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:107)
+build	Build arm64 APK	2026-09-21T15:27:10.0783087Z 	at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:63)
+build	Build arm64 APK	2026-09-21T15:27:10.0901218Z failed to build APK: Failed to assemble APK with Io(BeforeSpawn(<closure>), Io(StderrFile(OwnedFd { fd: 24 }), Io(StdoutFile(OwnedFd { fd: 23 }), Io(StdinFile(OwnedFd { fd: 22 }), Io(Env("TAURI_CLI_VERBOSITY", "0"), Io(Env("NDK_HOME", "/usr/local/lib/android/sdk/ndk/26.3.11579264"), Io(Env("RUST_LOG_STYLE", "always"), Io(Env("CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang"), Io(Env("PATH", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/node_modules/.bin:/home/runner/setup-pnpm/node_modules/.pnpm/pnpm@8.15.9/node_modules/pnpm/dist/node-gyp-bin:/usr/local/lib/android/sdk/platform-tools:/usr/local/lib/android/sdk/cmdline-tools/16.0/bin:/home/runner/setup-pnpm/node_modules/.bin:/opt/hostedtoolcache/node/20.20.2/x64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"), Io(Env("CARGO_HOME", "/home/runner/.cargo"), Io(Env("WRY_ANDROID_PACKAGE", "com.rodroid.il2cppdumper"), Io(Env("CARGO_TERM_COLOR", "always"), Io(Env("CARGO_TARGET_X86_64_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android24-clang"), Io(Env("CARGO_TARGET_X86_64_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("CARGO_TARGET_I686_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("CARGO_TARGET_AARCH64_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("WRY_ANDROID_KOTLIN_FILES_OUT_DIR", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/app/src/main/java/com/rodroid/il2cppdumper/generated"), Io(Env("TAURI_ANDROID_PROJECT_PATH", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"), Io(Env("HOME", "/home/runner"), Io(Env("CARGO_TARGET_I686_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android24-clang"), Io(Env("WRY_ANDROID_LIBRARY", "rodroid_il2cppdumper_lib"), Io(Env("CARGO_TARGET_ARMV7_LINUX_ANDROIDEABI_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi24-clang"), Io(Env("CARGO_INCREMENTAL", "0"), Io(Env("CARGO_TARGET_ARMV7_LINUX_ANDROIDEABI_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("ANDROID_HOME", "/usr/local/lib/android/sdk"), Io(Env("TAURI_ANDROID_PACKAGE_UNESCAPED", "com.rodroid.il2cppdumper"), Cmd(["/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/gradlew", "--project-dir", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"]))))))))))))))))))))))))))): command ["/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/gradlew", "--project-dir", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"] exited with code 1
+build	Build arm64 APK	2026-09-21T15:27:10.0929058Z        Error failed to build APK: Failed to assemble APK with Io(BeforeSpawn(<closure>), Io(StderrFile(OwnedFd { fd: 24 }), Io(StdoutFile(OwnedFd { fd: 23 }), Io(StdinFile(OwnedFd { fd: 22 }), Io(Env("TAURI_CLI_VERBOSITY", "0"), Io(Env("NDK_HOME", "/usr/local/lib/android/sdk/ndk/26.3.11579264"), Io(Env("RUST_LOG_STYLE", "always"), Io(Env("CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang"), Io(Env("PATH", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/node_modules/.bin:/home/runner/setup-pnpm/node_modules/.pnpm/pnpm@8.15.9/node_modules/pnpm/dist/node-gyp-bin:/usr/local/lib/android/sdk/platform-tools:/usr/local/lib/android/sdk/cmdline-tools/16.0/bin:/home/runner/setup-pnpm/node_modules/.bin:/opt/hostedtoolcache/node/20.20.2/x64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"), Io(Env("CARGO_HOME", "/home/runner/.cargo"), Io(Env("WRY_ANDROID_PACKAGE", "com.rodroid.il2cppdumper"), Io(Env("CARGO_TERM_COLOR", "always"), Io(Env("CARGO_TARGET_X86_64_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android24-clang"), Io(Env("CARGO_TARGET_X86_64_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("CARGO_TARGET_I686_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("CARGO_TARGET_AARCH64_LINUX_ANDROID_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("WRY_ANDROID_KOTLIN_FILES_OUT_DIR", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/app/src/main/java/com/rodroid/il2cppdumper/generated"), Io(Env("TAURI_ANDROID_PROJECT_PATH", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"), Io(Env("HOME", "/home/runner"), Io(Env("CARGO_TARGET_I686_LINUX_ANDROID_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android24-clang"), Io(Env("WRY_ANDROID_LIBRARY", "rodroid_il2cppdumper_lib"), Io(Env("CARGO_TARGET_ARMV7_LINUX_ANDROIDEABI_LINKER", "/usr/local/lib/android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi24-clang"), Io(Env("CARGO_INCREMENTAL", "0"), Io(Env("CARGO_TARGET_ARMV7_LINUX_ANDROIDEABI_RUSTFLAGS", "-Clink-arg=-landroid -Clink-arg=-llog -Clink-arg=-lOpenSLES"), Io(Env("ANDROID_HOME", "/usr/local/lib/android/sdk"), Io(Env("TAURI_ANDROID_PACKAGE_UNESCAPED", "com.rodroid.il2cppdumper"), Cmd(["/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/gradlew", "--project-dir", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"]))))))))))))))))))))))))))): command ["/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android/gradlew", "--project-dir", "/home/runner/work/rodroid-il2cppdumper/rodroid-il2cppdumper/src-tauri/gen/android"] exited with code 1
+build	Build arm64 APK	2026-09-21T15:27:10.0948045Z  ELIFECYCLE  Command failed with exit code 1.
+build	Build arm64 APK	2026-09-21T15:27:10.1143956Z ##[error]Process completed with exit code 1.
