@@ -818,7 +818,9 @@ impl Il2CppDecompiler {
 
             let mut params = Vec::new();
             for j in 0..method_def.parameter_count as usize {
-                let param_def = metadata.parameter_defs[method_def.parameter_start as usize + j].clone();
+                let Some(param_def) = metadata.parameter_defs.get(method_def.parameter_start as usize + j).cloned() else {
+                    continue;
+                };
                 let param_name = metadata.get_string_from_index(param_def.name_index)?;
                 let param_type = il2cpp.types.get(param_def.type_index as usize).cloned().unwrap_or_default();
                 let param_type_name = executor.get_type_name(&param_type, metadata, il2cpp, false, false);
