@@ -791,7 +791,13 @@ impl Il2CppDecompiler {
             let mods = executor.get_modifiers(method_def.flags as u32).to_string();
             buf.push_str(&mods);
 
-            let return_type = il2cpp.types[method_def.return_type as usize].clone();
+            let return_type = match il2cpp.types.get(method_def.return_type as usize) {
+                Some(t) => t.clone(),
+                None => {
+                    writeln!(buf, "\t// [WARN] Skipped method due to invalid return_type index: 0x{:X}", method_def.return_type).ok();
+                    continue;
+                }
+            };
             let method_name_raw = metadata.get_string_from_index(method_def.name_index as i32)?;
             let mut method_name = method_name_raw;
 
