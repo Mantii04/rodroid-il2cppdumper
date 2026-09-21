@@ -25,7 +25,8 @@ impl Il2CppDecompiler {
         mut logger: L,
     ) -> Result<()> {
         let output_path = Path::new(output_dir).join("dump.cs");
-        let dump_file = std::fs::File::create(output_path)?;
+        let mut dump_file = std::fs::File::create(output_path)?;
+    use std::io::Write;
     let mut dump_writer = std::io::BufWriter::new(dump_file);
     let mut buf = String::with_capacity(1 << 20);
 
@@ -312,7 +313,6 @@ impl Il2CppDecompiler {
         for (type_text, split) in type_results {
             buf.push_str(&type_text);
         if buf.len() > 1000000 {
-            use std::io::Write;
             dump_writer.write_all(buf.as_bytes()).ok();
             buf.clear();
         }
@@ -337,8 +337,7 @@ impl Il2CppDecompiler {
             }
         });
 
-        use std::io::Write;
-    dump_writer.write_all(buf.as_bytes())?;
+        dump_writer.write_all(buf.as_bytes())?;
         Ok(())
     }
 
