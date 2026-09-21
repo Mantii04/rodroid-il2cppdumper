@@ -25,7 +25,7 @@ impl Il2CppDecompiler {
         mut logger: L,
     ) -> Result<()> {
         let output_path = Path::new(output_dir).join("dump.cs");
-        let mut dump_file = std::fs::File::create(output_path)?;
+        let mut dump_file = std::fs::File::create(format!("{}/dump.cs", output_dir))?;
     use std::io::Write;
     let mut dump_writer = std::io::BufWriter::new(dump_file);
     let mut buf = String::with_capacity(1 << 20);
@@ -39,14 +39,14 @@ impl Il2CppDecompiler {
             let image_defs_clone = metadata.image_defs.clone();
 
             let mut rva_to_name: HashMap<u64, String> = image_defs_clone
-                .par_iter()
+                .iter()
                 .flat_map(|image_def| {
                     let image_name = metadata
                         .get_string_from_index(image_def.name_index)
                         .unwrap_or_default();
                     let type_end = image_def.type_start as usize + image_def.type_count as usize;
                     (image_def.type_start as usize..type_end)
-                        .into_par_iter()
+                        .into_iter()
                         .flat_map(move |type_def_index| {
                             let td = &metadata.type_defs.get(type_def_index).cloned().unwrap_or_default();
                             let type_name = metadata
@@ -79,7 +79,7 @@ impl Il2CppDecompiler {
                 .map(|(k, v)| (*k, *v))
                 .collect();
             let generic_entries: Vec<(u64, String)> = spec_pointers
-                .par_iter()
+                .iter()
                 .filter_map(|(spec_idx, ptr)| {
                     if *ptr == 0 {
                         return None;
@@ -107,7 +107,7 @@ impl Il2CppDecompiler {
 
             let total_string_lits = metadata.string_literals.len();
             let string_table: HashMap<u32, String> = (0..total_string_lits)
-                .into_par_iter()
+                .into_iter()
                 .filter_map(|i| {
                     metadata.get_string_literal_from_index(i).ok().map(|s| (i as u32, s))
                 })
@@ -224,7 +224,7 @@ impl Il2CppDecompiler {
         let want_split_disasm = config.dump_disassembly_target == 0 || config.dump_disassembly_target == 2;
 
         let type_results: Vec<(String, Option<(std::path::PathBuf, String)>)> = type_jobs
-            .par_iter()
+            .iter()
             .map(|(img_idx, type_def_index, image_name)| {
                 let mut local_exec = Il2CppExecutor::new_for_worker(executor);
                 let mut type_buf = String::with_capacity(2048);
@@ -331,7 +331,7 @@ impl Il2CppDecompiler {
             }
         }
 
-        split_file_outputs.par_iter().for_each(|(file_path, content)| {
+        split_file_outputs.iter().for_each(|(file_path, content)| {
             if let Err(e) = fs::write(file_path, content) {
                 eprintln!("WARNING: Failed to write diffable cs: {e}");
             }
@@ -980,7 +980,7 @@ impl Il2CppDecompiler {
         // Small types: stay sequential to avoid rayon join overhead.
         // Large types: parallel decode+format (the real disasm cost).
         let computed: Vec<(u64, String)> = if jobs.len() >= 4 {
-            jobs.par_iter()
+            jobs.iter()
                 .map(|(method_index, rva, bytes)| {
                     let method_def = &metadata.method_defs.get(*method_index).cloned().unwrap_or_default();
                     let method_ctx = Self::build_method_disasm_ctx(
@@ -1143,7 +1143,7 @@ impl Il2CppDecompiler {
         let max_insns = config.max_disassembly_instructions.min(120);
 
         sample_rvas
-            .par_iter()
+            .iter()
             .filter_map(|&rva| {
                 let body_size = il2cpp.get_method_body_size(rva, sorted_addrs);
                 let probe = body_size.min(max_probe);
@@ -1313,7 +1313,7 @@ impl Il2CppDecompiler {
             .collect();
 
         let ann_chunks: Vec<Vec<DisasmAnnotation>> = jobs
-            .par_iter()
+            .iter()
             .map(|(usage_type, dest, src)| {
                 let mut local_exec = Il2CppExecutor::new_for_worker(executor);
                 let mut anns = Vec::new();
@@ -1603,7 +1603,7 @@ impl Il2CppDecompiler {
 
         // Parallel scan of data sections (peek-only; map-reduce annotations).
         let ann_chunks: Vec<Vec<DisasmAnnotation>> = data_sections
-            .par_iter()
+            .iter()
             .map(|sec| {
                 let mut local_exec = Il2CppExecutor::new_for_worker(executor);
                 let mut anns = Vec::new();
