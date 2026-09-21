@@ -620,7 +620,7 @@ impl Il2CppDecompiler {
                 let method_def = metadata.method_defs[type_def.method_start as usize + property_def.set as usize].clone();
                 let mods = executor.get_modifiers(method_def.flags as u32).to_string();
                 buf.push_str(&mods);
-                let param_def = metadata.parameter_defs[method_def.parameter_start as usize].clone();
+                let Some(param_def) = metadata.parameter_defs.get(method_def.parameter_start as usize).cloned() else { property_type_name = "object".to_string(); continue };
                 let param_type = il2cpp.types.get(param_def.type_index as usize).cloned().unwrap_or_default();
                 property_type_name = executor.get_type_name(&param_type, metadata, il2cpp, false, false);
             } else {
