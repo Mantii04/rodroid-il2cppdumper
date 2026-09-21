@@ -25,8 +25,7 @@ impl Il2CppDecompiler {
         mut logger: L,
     ) -> Result<()> {
         let output_path = Path::new(output_dir).join("dump.cs");
-        let dump_path = std::path::Path::new(&output_path).join("dump.cs");
-    let dump_file = std::fs::File::create(dump_path)?;
+        let dump_file = std::fs::File::create(output_path)?;
     let mut dump_writer = std::io::BufWriter::new(dump_file);
     let mut buf = String::with_capacity(1 << 20);
 
