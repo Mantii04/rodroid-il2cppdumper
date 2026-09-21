@@ -31,12 +31,11 @@ tauri-plugin-os = "2"
 tauri-plugin-fs = "2"
 
 [profile.release]
-panic = "unwind"
 opt-level = 3
 lto = true
 codegen-units = 1
 strip = "symbols"
-panic = "abort"
+panic = "unwind"
 debug = false
 overflow-checks = false
 incremental = false
